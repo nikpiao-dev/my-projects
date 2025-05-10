@@ -142,6 +142,7 @@ body {
     padding: 20px;
     margin: 0 20px 20px 10px;
     border: 2px solid black;
+    border-radius: 10px;
     vertical-align: top; 
 }
 
