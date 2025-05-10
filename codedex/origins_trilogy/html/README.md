@@ -1,6 +1,8 @@
 # Essenza - Restaurant Menu
 
-Welcome to **Essenza**, a simple and elegant restaurant menu website created with HTML. This project features a menu of three dishes, with an order form for selecting quantities and add-ons. 
+Welcome to **Essenza**, a simple and elegant restaurant menu website created with HTML. 
+
+This final project for html courses in codedex features a menu of three dishes, with an order form for selecting quantities and add-ons. 
 
 ## Features
 
@@ -23,17 +25,4 @@ Welcome to **Essenza**, a simple and elegant restaurant menu website created wit
 - **`restaurante-italiano.jpg`**: Header image with the text "Ristorante Italiano".
 - **`restaurant_menu.html.png`**: Screenshot of the project for preview purposes.
 
-## How to Use
-
-1. Clone or download the repository.
-2. Open the `restaurant_menu.html` file in any browser (e.g., Google Chrome, Firefox).
-3. Explore the menu and use the order form to simulate an order!
-
-## Contributing
-
-Feel free to fork this repository, make improvements, and submit pull requests. Contributions are always appreciated!
-
-## License
-
-This project is open-source and available under the [MIT License](LICENSE).
 
