@@ -1,8 +1,8 @@
-# Essenza - Restaurant Menu
+# Essenza - Restaurant Menu Final Project
 
-Welcome to **Essenza**, a simple and elegant restaurant menu website created with HTML. 
+Welcome to **Essenza**, a simple restaurant menu website created with HTML and a bit of CSS. 
 
-This final project for html courses in codedex features a menu of three dishes, with an order form for selecting quantities and add-ons. 
+This final project for the HTML course on Codedex features a menu with three dishes and an order form for selecting quantities and add-ons
 
 ## Features
 
