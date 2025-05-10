@@ -12,7 +12,6 @@ body {
 }
 
 /* Header and Nav styles */
-
 #header-section {
     text-align: center;
     background-color: whitesmoke;
@@ -40,9 +39,7 @@ body {
     text-decoration: none;
     color: #000;
     font-weight: normal;
-    transition: color 0.3s;
 }
-
 
 /*  card section */
 #card-section {
@@ -141,7 +138,7 @@ body {
 
 #projects-content .project {
     display: inline-block;
-    width: 30%; /* Adjust the width to fit your design */
+    width: 30%;
     padding: 20px;
     margin: 0 20px 20px 10px;
     border: 2px solid black;
@@ -149,18 +146,23 @@ body {
 }
 
 .project h3 {
-    margin-bottom: 10px;
-    text-align: center;
+    margin-bottom: 15px;
+    text-align: left;
 }
 
 .project a {
+    display: inline-block;
+    color: black;
+    font-weight: 600;
     text-decoration: none;
-    margin-top: 5px;
+    text-align: center;
+    padding: 15px;
+    margin-top: 15px;
+    border: 2px solid blueviolet;
+    border-radius: 30px;
 }
 
-
 /* footer section */
-
 #footer-section {
     text-align: center; 
     padding: 20px;
