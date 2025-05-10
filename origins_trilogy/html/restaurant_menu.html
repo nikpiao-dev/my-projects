@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Essenza</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    body {
+        color: white;
+        background-color: black;
+    }
+    #header-img {
+        width: 100%;
+        height: 300px;
+        display: block;
+    }
+    h1 {
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        font-weight: bolder;
+        font-size: 40px;
+    }
+    nav {
+        text-align: center;
+    }
+    nav h2 {
+        display: inline-block;
+        padding: 20px 60px;
+    }
+    nav a {
+        text-decoration: none;
+        color: wheat;
+    }
+    section h2 {
+        text-align: center;
+        margin-top: 20px;
+        padding-top: 20px;
+    }
+    footer {
+        text-align: center;
+    }
+    hr {
+        width: 95%;
+        margin: auto;
+    }
+    form > article {
+        display: block;
+    }
+    article img {
+        width: 250px;
+    }
+    #menu h3 {
+        font-size: 30px;
+    }
+</style>
+<body>
+    <header>
+         <img src="./restaurante-italiano.jpg" alt="Image displaying the words 'ristorante italiano'" id="header-img">
+        <h1>Essenza</h1>
+        <nav>
+            <h2><a href="#menu">Menu</a></h2>
+            <h2><a href="#order-form">Order Form</a></h2>
+        </nav>
+    </header>
+    <hr>
+    <main>
+        <section id="menu">
+            <h2>Menu</h2>
+            <br><br>
+            <article>
+                <img src="focaccia.jpg" alt="Delicious Focaccia">
+                <h3>Focaccia</h3>
+                <p>Oven-baked flatbread, seasoned with rosemary, sea salt, and olive oil. Can be served plain or with various toppings. - <em>$8</em></p>
+            </article>
+            <br><br>
+            <hr>
+            <article>
+                <img src="carbonara.jpg" alt="Classic Spaghetti alla Carbonara">
+                <h3>Spaghetti alla Carbonara</h3>
+                <p>Spaghetti with eggs, Pecorino Romano cheese, cured pork (guanciale or pancetta), and black pepper. - <em>$15</em></p>
+            </article>
+            <br><br>
+            <hr>
+            <article>
+                <img src="bistecca.jpg" alt="Tender Bistecca alla Fiorentina">
+                <h3>Bistecca alla Fiorentina</h3>
+                <p>A thick-cut, charcoal-grilled T-bone steak, seasoned simply with salt and pepper, a specialty of Florence. - <em>$35</em></p>
+            </article>
+            <br><br>
+            <hr>
+        </section>
+        <section id="order-form">
+            <h2>Place Your Order</h2>
+            <form action="#" method="#">
+                <article>
+                    <label for="focaccia">Focaccia:</label>
+                    <input type="number" id="focaccia" name="focaccia" min="0" max="10"><br><br>
+                </article>
+                <article>
+                    <label for="carbonara">Spaghetti alla Carbonara:</label>
+                    <input type="number" id="carbonara" name="carbonara" min="0" max="10"><br><br>
+                </article>
+                <article>
+                    <label for="bistecca">Bistecca alla Fiorentina:</label>
+                    <input type="number" id="bistecca" name="bistecca" min="0" max="10"><br><br>
+                </article>
+                <hr><br>
+                <h3>Sides & Add-ons</h3>
+                <br>
+                <input type="checkbox" id="side-salad" name="side-salad">
+                <label for="side-salad">Side Salad (+ $3)</label><br>
+    
+                <input type="checkbox" id="garlic-bread" name="garlic-bread">
+                <label for="garlic-bread">Garlic Bread (+ $2)</label><br>
+    
+                <input type="radio" id="extra_cheese-parmesan" name="extra-cheese">
+                <label for="extra-cheese_parmesan">Extra Parmesan Cheese (+ $1)</label><br>
+    
+                <input type="radio" id="extra-cheese-mozzarella" name="extra-cheese">
+                <label for="extra-cheese-mozzarella">Extra Mozzarella Cheese (+ $1.50)</label><br><br>
+    
+                <label for="comments">Leave your comments here:</label><br>
+                <textarea id="comments" name="comments" rows="3" cols="30" placeholder="Share any specific requests or feedback here."></textarea><br><br>
+                <input type="submit" value="Go To Checkout">
+                <br><br>
+            </form>
+        </section>
+    </main>
+    <br>
+    <hr>
+    <footer>
+        <p>Made with love by @np430</p>
+    </footer>
+</body>
+</html>
