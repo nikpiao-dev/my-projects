@@ -1,57 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Personal Site</title>
-  <link href="styles.css" rel="stylesheet" />
-</head>
-<body>
-  <header>
-    <div>
-        <h1>Nik Piao</h1>
-        <nav>
-            <h2><a href="#about">About</a></h2>
-            <h2><a href="#projects">Projects</a></h2>
-            <h2><a href="#contact">Contact</a></h2>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Site</title>
+    <link href="styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header id="header-section">
+      <div class="header-content">
+        <!-- Codedex username -->
+        <h1 class="header-1"><a href="https://www.codedex.io/@np430">np430</a></h1>
+        <nav class="nav-content">
+          <h2><a href="#card-section">About</a></h2>
+          <h2><a href="#projects-content">Projects</a></h2>
+          <h2><a href="#footer-section">Contact</a></h2>
         </nav>
-    </div>
-  </header>
-  <main>
-    <div>
-        <section>
-            <img src="" alt="">
+      </div>
+    </header>
+    <hr />
+    <br /><br />
+    <main>
+      <div id="card-section">
+        <section class="card-section-info">
+          <h2>Hi, I'm Nik</h2>
+          <h3>Get to Know Me:</h3>
+          <p>
+            "I love playing video games, learning coding, and exploring new
+            places through travel. When I'm not coding, you’ll find me reading
+            web novels online."
+          </p>
         </section>
-        <section>
-            <h2></h2>
-            <h3></h3>
-            <p></p>
+        <section class="card-section-image">
+          <img id="image-profile" src="./images/profile-image.jpg" alt="profile image smiling" />
         </section>
-        <section>
-            <h3>Resume</h3>
-            <h3>Projects</h3>
-            <h3>Contact</h3>
+        <br />
+        <section class="card-section-links">
+          <h3 class="resume-link"><a href="#resume">Resume</a></h3>
+          <h3 class="profile-link"><a href="#profile">Profile</a></h3>
+          <h3 class="blog-link"><a href="#blog">Blog</a></h3>
         </section>
-    </div>
-  </main>
-  <footer>
-    <article>
-        <p>&copy; 2025 by Nik Piao</p>
-        <p>Crafted with care by @np430</p>
-    </article>
-    <article>
-        <h4>Phone</h4>
-        <p></p>
-    </article>
-    <article>
-        <h4>Email</h4>
-        <p></p>
-    </article>
-    <article>
-        <h4></h4>
-        <img src="" alt="linkedIn-image">
-        <img src="" alt="twitter-x-image">
-    </article>
-  </footer>
-</body>
+        <br /><br />
+        <article>
+          <div class="social-icons">
+            <h4>Follow Me:</h4>
+            <!-- LinkedIn Icon -->
+            <a target="_blank" href="https://www.linkedin.com/">
+              <img src="./images/icons8-linkedin-50.png" alt="LinkedIn Icon" />
+            </a>
+            <a href="https://icons8.com/icon/8808/linkedin" style="display: none;">LinkedIn icon by Icons8</a>
+
+            <!-- X (Twitter) Icon -->
+            <a target="_blank" href="https://twitter.com/">
+              <img src="./images/icons8-x-50.png" alt="X (Twitter) Icon" />
+            </a>
+            <a href="https://icons8.com" style="display: none;">X icon by Icons8</a>
+
+            <!-- GitHub Icon -->
+            <a target="_blank" href="https://github.com/">
+              <img src="./images/icons8-github-50.png" alt="GitHub Icon" />
+            </a>
+            <a href="https://icons8.com" style="display: none;">GitHub icon by Icons8</a>
+          </div>
+        </article>
+      </div>
+      <section id="projects-content">
+        <h2>Projects</h2>
+        <article>
+          <!-- Project 1 -->
+          <div class="project">
+            <h3>Recipe Finder App</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisi
+              est, facilisis ac magna eu, fermentum volutpat magna.
+            </p>
+            <a href="#recipe" target="_blank">View</a>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="project">
+            <h3>Task Management App</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisi
+              est, facilisis ac magna eu, fermentum volutpat magna.
+            </p>
+            <a href="#task" target="_blank">View</a>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="project">
+            <h3>Weather Dashboard</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisi
+              est, facilisis ac magna eu, fermentum volutpat magna.
+            </p>
+            <a href="#weather" target="_blank">View</a>
+          </div>
+        </article>
+      </section>
+    </main>
+    <br /><br />
+    <hr />
+    <footer id="footer-section">
+      <article>
+        <p>&copy;<strong> 2025 by @np430</strong></p>
+        <p>Crafted with care ❤️</p>
+      </article>
+      <article>
+        <h4>Phone:</h4>
+        <p>(777) 893-9102</p>
+      </article>
+      <article>
+        <h4>Email:</h4>
+        <p>np430@gmail.com</p>
+      </article>
+    </footer>
+  </body>
 </html>
