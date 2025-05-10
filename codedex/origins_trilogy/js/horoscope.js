@@ -1,4 +1,4 @@
-// Check point project - Horoscope
+// Checkpoint Javascript Project - Horoscope
 
 // define variables:
 
