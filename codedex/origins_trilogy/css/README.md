@@ -1,26 +1,30 @@
 # Personal Website Project 🌐
 
-Welcome to the final project for the CSS course! 🎉 This project will showcase everything you've learned in HTML and CSS while building a personal website. It's an invaluable tool for self-expression and an essential part of any web developer’s portfolio.
+Welcome to my final project for the Codedex CSS course! 🎉
+
+This project will showcase everything I’ve learned in HTML and CSS while building my personal website. It’s an invaluable tool for self-expression and an essential part of any web developer’s portfolio.
 
 ## Project Structure
 
 - `index.html`: The main HTML file that structures the content of the site.
 - `styles.css`: The CSS file where all the styling for the site is defined.
+- `images`: This folder contains all the icons and the profile picture used on the site.
 
 ## Sections of the Website
 
 ### 1. **About Me**
-   - A brief introduction about yourself.
+   - A brief introduction about myself.
    - Includes a profile picture and a short bio.
+   - Includes social media icons linking to LinkedIn, Twitter, GitHub (sample profile only).
 
 ### 2. **Projects**
-   - Displays a list of your notable projects.
-   - Each project has a title, description, and a link to the live project (if available).
+   - Displays a list of your sample projects.
+   - Each project has a title, description, and a link to the live project (sample only).
 
 ### 3. **Contact**
+   - Inlcudes year and short custom message
    - Provides contact details such as email and phone.
-   - Includes social media icons linking to your profiles (LinkedIn, Twitter, GitHub).
-
+   
 ## Style with CSS
 
 The website is styled using CSS, which includes:
