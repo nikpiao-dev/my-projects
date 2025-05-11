@@ -25,6 +25,7 @@ Things to do (example):
     A) Visit the market to prepare for a journey.
     B) Go to the forest—you heard whispers of something stirring.
     C) Stay in the inn and talk to the old innkeeper.
+    
 """
 
 title = "Path of the Wanderer: The Journey of Rowen of Elderfall"
