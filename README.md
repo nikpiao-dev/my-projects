@@ -1,16 +1,16 @@
-Welcome to **my-project**! 
+Welcome to **my-projects**! 
 
 This repository is a personal coding portfolio built through lessons and challenges on the [Codédex](https://www.codedex.io) platform.
 
 ## 📁 Folder Structure
 
 my-project/
+├── README.md
 └── codedex/
-├── github_course/
-├── origins_trilogy/
-├── legend_python/
-└── others/
-
+    ├── github_course/
+    ├── origins_trilogy/
+    ├── legend_python/
+    ├── others/
 
 ### 🧠 Folder Descriptions
 
