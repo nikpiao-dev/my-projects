@@ -1,6 +1,6 @@
-# My Project
+Welcome to **my-project**! 
 
-Welcome to **my-project**! This repository is a personal coding portfolio built through lessons and challenges on the [Codédex](https://www.codedex.io) platform.
+This repository is a personal coding portfolio built through lessons and challenges on the [Codédex](https://www.codedex.io) platform.
 
 ## 📁 Folder Structure
 
@@ -11,9 +11,6 @@ my-project/
 ├── legend_python/
 └── others/
 
-yaml
-Copy
-Edit
 
 ### 🧠 Folder Descriptions
 
@@ -39,10 +36,12 @@ Edit
 - **Origins Trilogy**  
   - JavaScript (Course 3)
 
-- **GitHub Course**  
 - **React**
 - **Data Structures & Algorithms (Python)**
 - **Node.js**
+
+
+---
 
 ## ✅ Courses Completed
 
@@ -54,7 +53,21 @@ Edit
   - HTML (Course 1)  
   - CSS (Course 2)
 
+- **Command Line**  
+- **Git & GitHub Course**  
 - **SQL**
+
+
+---
+
+## 🟢 Courses Tried
+- **Java**
+- **C++**
+
+## 🟢 Courses Untouched
+-**Gen AI**
+-**p5.js**
+
 
 ---
 
