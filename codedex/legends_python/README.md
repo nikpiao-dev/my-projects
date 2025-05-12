@@ -1,3 +1,5 @@
+# Codedex Python Checkpoint Project:
+
 # Fantasy Mini-Adventure: Path of the Wanderer
 
 ## Overview
