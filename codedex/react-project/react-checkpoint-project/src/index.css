@@ -13,56 +13,48 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
 body {
-  margin: 0;
   display: flex;
   place-items: center;
+  font-family: sans-serif;
   min-width: 320px;
   min-height: 100vh;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+
+/* Custom styles - not the default vite styles(above)*/
+
+.color-picker {
+  text-align: center;
+  padding: 10px;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+
+.color-list {
+  display: inline-block;
+  margin: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+.color-item {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  margin: 2rem;
+  border-radius: 10px;
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  position: relative;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.color-code {
+  position: absolute;
+  top: 35%;
+  left: 15%;
+  background: none;
+  color: #fff;
+  font-weight: bolder;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 1rem;
 }
