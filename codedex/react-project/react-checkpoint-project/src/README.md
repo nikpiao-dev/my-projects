@@ -2,7 +2,7 @@
 #  React: Checkpoint Project - Color Picker 🎨
 
 
-[Color Picker](./colorPicker.png)
+![Color Picker](./colorPicker.png)
 
 ## Checkpoint ⛳️
 
