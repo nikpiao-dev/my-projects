@@ -12,7 +12,7 @@ my-project/
     ├── legend_python/
     ├── others/
 
-### 🧠 Folder Descriptions
+## 🧠 Folder Descriptions
 
 - **`github_course/`**  
   Contains exercises and notes from the GitHub-focused course on Codédex. Topics include version control basics, GitHub workflows, and collaboration tips.
@@ -22,6 +22,12 @@ my-project/
 
 - **`legend_python/`**  
   Focused on Python fundamentals and intermediate concepts. Includes completed Intermediate Python and NumPy courses, with the core Python course currently in progress.
+
+- **`react_project/`**  
+  Contains React projects and exercises. Covers JSX, components, props, state management, and event handling based on current React coursework.
+
+- **`node_JS/`**  
+  Dedicated to backend development with Node.js. Includes exercises and projects covering modules, Express.js, file systems, and API development.
 
 - **`others/`**  
   Miscellaneous files and practice exercises that don't fit into the other categories. This might include experimental scripts, side projects, or learning notes.
