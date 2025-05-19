@@ -89,6 +89,12 @@ p {
   border-color: #01e770;
 }
 
+.circle {
+  border-color: #01e770;
+  box-shadow: 0 0 15px 5px rgba(1, 231, 112, 0.5);
+}
+
+
 .circle-mask {
   border-color: #7585ec;
 }
@@ -100,6 +106,7 @@ p {
   position: relative;
   top: 50px;
   color: #d8e9ef;
+  margin-bottom: 10px;
 }
 
 button {
