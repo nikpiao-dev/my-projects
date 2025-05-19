@@ -1,14 +1,23 @@
 html {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Uncial Antiqua", Helvetica, sans-serif;
     font-size: 20px;
     letter-spacing: 0.8px;
     min-height: 100vh;
     color: #d8e9ef;
-    background-image: 
-        linear-gradient(60deg, #ff7e5f 0%, #feb47b 100%),
-        linear-gradient(45deg, #1e3c72 0%, #2a5298 100%),
-        linear-gradient(120deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+    background-image: url('https://w.wallhaven.cc/full/p8/wallhaven-p8ymjj.jpg');
     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.402);
+  z-index: -1;
 }
 
 h1 {
@@ -23,6 +32,7 @@ p {
 .app-message {
   height: 20px;
   margin: 10px auto 20px auto;
+  padding-bottom: 20px;
 }
 
 .app-container {
@@ -76,16 +86,16 @@ p {
 }
 
 .circle {
-  border-color: #7585ec;
+  border-color: #01e770;
 }
 
 .circle-mask {
-  border-color: #963f4e;
+  border-color: #7585ec;
 }
 
 
 .app-counter-box {
-  font-family: 'Droid Sans Mono', monospace;
+  font-family: "Uncial Antiqua", fantasy, monospace;
   font-size: 250%;
   position: relative;
   top: 50px;
@@ -105,5 +115,5 @@ button {
 }
 
 button:hover {
-  color: #24c2fc;
+  color: #5405f1;
 }
