@@ -1,0 +1,39 @@
+Project: Mini Interactive Story Game
+Instructions:
+Setup the UI:
+
+A main text area or paragraph where the story text appears.
+
+Below it, 2 or 3 buttons representing choices the user can click.
+
+A “Restart” button to reset the story.
+
+Functionality:
+
+The story starts with an opening scene (a short paragraph).
+
+Based on the user’s choice (clicking one of the buttons), the story branches to different paragraphs.
+
+Each scene has its own text and choices, creating a branching narrative.
+
+When a scene has no further choices, show an ending message and the option to restart.
+
+JavaScript Logic:
+
+Represent the story as an object or array where each scene has:
+
+A text paragraph.
+
+An array of choices (each choice has text and points to the next scene).
+
+Clicking a choice updates the main text and buttons for the next scene.
+
+The Restart button resets the story to the beginning.
+
+Bonus:
+
+Keep track of user choices and show a summary at the end.
+
+Add some styling changes based on the story mood (e.g., background color changes per scene).
+
+Animate transitions between scenes (fade in/out).
