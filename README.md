@@ -4,13 +4,15 @@ This repository is a personal coding portfolio built through lessons and challen
 
 ## 📁 Folder Structure
 
+```text
 my-project/
 ├── README.md
-└── codedex/
+└── codedex/ 
     ├── github_course/
     ├── origins_trilogy/
     ├── legend_python/
-    ├── others/
+    └── others/
+```
 
 ## 🧠 Folder Descriptions
 
