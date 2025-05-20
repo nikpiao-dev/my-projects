@@ -31,6 +31,9 @@ my-project/
 - **`node_JS/`**  
   Dedicated to backend development with Node.js. Includes exercises and projects covering modules, Express.js, file systems, and API development.
 
+- **`gen_ai/`**  
+  Contains lessons and exercises from the generative AI course. Covers foundational concepts, prompt engineering, and practical applications.
+
 - **`others/`**  
   Miscellaneous files and practice exercises that don't fit into the other categories. This might include experimental scripts, side projects, or learning notes.
 
