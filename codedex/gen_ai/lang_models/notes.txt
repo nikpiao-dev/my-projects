@@ -1,0 +1,19 @@
+// Gen AI
+
+In a world where artificial intelligence (AI) is rapidly changing how we interact with technology, many things are possible. From self-driving cars 🚗 to smart home devices 🏠, ChatGPT 💬 to robotics 🤖, AI is changing the way we work, play, and learn.
+
+
+## How does AI work?
+While there are different kinds of AI, this course explores generative AI (Gen AI, for short). Gen AI is a system that creates new content (text, images, videos, etc.) based on prompts and large language models (LLMs).
+
+LLMs are trained using natural language processing (NLP) techniques and can generate content through it. NLP is a branch of machine learning that teaches computers to understand, interpret, and generate human language.
+
+
+Some popular LLMs include:
+
+OpenAI's GPT-4
+Anthropic's Claude
+Google's Gemini
+In this chapter, we will be using Python to dive straight into language models to understand how the models use patterns, sequences, and datasets to generate text, translate languages, and answer questions.
+
+Buckle in, this is gonna be fun! 😎
