@@ -71,7 +71,7 @@ my-project/
 - **C++**
   
 ## 🟢 Courses Untouched
--**p5.js**
+- **p5.js**
 
 ---
 
