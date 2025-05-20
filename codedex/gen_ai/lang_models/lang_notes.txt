@@ -1,0 +1,30 @@
+# Language Models 101
+
+Language models are a key part of AI that help computers understand and generate human language. Ever wonder how voice assistants like Siri or Alexa can readily present information upon request? They're using language models to do that! 👋
+
+
+
+"Hey Siri, what is a language model to a fifth grader?"
+
+"Imagine a language model like a super-smart robot that can read and write. It learns from tons of books, articles, and conversations, so it knows a lot about words and sentences. When you need help with something, it uses all that knowledge to give you the best answer it can!"
+
+
+
+## Sequences
+
+Language models help computers predict the likelihood of a sequence of words. Like how you might guess the next letter of a common phrase in Wheel of Fortune, language models can predict the next word in a sentence. 😲
+
+Wheel of Fortune unsolved word puzzle
+
+In the image above, it's easy to fill in the blanks to complete the expression "Another feather in your cap" given the gaps in the text. With the proper training, a language model is capable of filling in the blanks and even predict what the next phrase will be. 🔮
+
+Predicting a sequence of words can be pretty helpful for everyday tasks, such as:
+
+📝 Text Generation: Creating natural-sounding sentences and paragraphs.
+🔍 Text Classification: Categorizing text into defined groups, like spam vs. non-spam emails.
+🗣️ Machine Translation: Translating text from one language to another, like English to Spanish.
+🚩 Spell Check: Finding and correcting spelling errors in text.
+
+
+## NLTK
+Python comes with many libraries that make work with language models easier. One of the most used libraries for AI is the nltk library. NLTK (Natural Language Toolkit) specializes in NLP tasks such as text generation, spell check, and translation.
