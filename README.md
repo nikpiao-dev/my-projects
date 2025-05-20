@@ -41,16 +41,10 @@ my-project/
 
 ## 🟢 Courses in Progress
 
-- **Legend: Python**  
-  - Python (Course 1)
-
-- **Origins Trilogy**  
-  - JavaScript (Course 3)
-
 - **React**
 - **Data Structures & Algorithms (Python)**
 - **Node.js**
-
+- **Gen AI**
 
 ---
 
@@ -70,18 +64,11 @@ my-project/
 - **Git & GitHub Course**  
 - **SQL**
 
-
 ---
-
-## 🟢 Courses Not Completed
-- **React**
-- **Data Structures & Algorithms (Python)**
-- **Node.js**
 
 ## 🟢 Courses Tried
 - **Java**
 - **C++**
--**Gen AI**
   
 ## 🟢 Courses Untouched
 -**p5.js**
