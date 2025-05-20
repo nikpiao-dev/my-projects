@@ -18,7 +18,7 @@ It’s a simple Rock Paper Scissors game built with Python and Flask and display
 ## Folder Structure
 
 ```text
-**final_project/
+final_project/
 ├── static/
 │ └── main.css
 ├── app.py
