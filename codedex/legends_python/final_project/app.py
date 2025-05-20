@@ -39,15 +39,25 @@ def play_game():
 # Possible moves
 choices = ['rock', 'paper', 'scissors']
 
-# random moves computer
-bot_move = random.choice(choices)
-
 
 def find_winner(user_pick):
+    # random moves computer
+    bot_move = random.choice(choices)
+    print(f"You picked: {user_pick}")
+    print(f"Computer chose: {bot_move}")
+
     if user_pick == bot_move:
-        return f"It's a draw!, {user_pick} = {bot_move}"
+        return "It's a draw!"
+    elif user_pick == "rock" and bot_move == "scissors":
+        return "You Win!"
+    elif user_pick == "paper" and bot_move == "rock":
+        return "You win!"
+    elif user_pick == "scissors" and bot_move == "paper":
+        return "You win!"
     else:
-        pass
+        return "You lose!"
+
+
 
 print(find_winner("paper"))
 

@@ -54,3 +54,12 @@ It’s a simple Rock Paper Scissors game built with Python and Flask and display
 # Open browser and go to
 
 http://127.0.0.1:5000
+
+
+P.S. if you want to run the app.py normally without flask:
+
+make sure to comment out this:
+
+# if __name__ == '__main__':
+     app.run(debug=True)
+
