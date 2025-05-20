@@ -56,13 +56,15 @@ my-project/
 
 ## ✅ Courses Completed
 
-- **Legend: Python**  
+- **Legend: Python**
+  - Python (Course 1)
   - Intermediate Python (Course 2)  
   - NumPy (Course 3)
 
 - **Origins Trilogy**  
   - HTML (Course 1)  
   - CSS (Course 2)
+  - Javascript (Course 3)
 
 - **Command Line**  
 - **Git & GitHub Course**  
@@ -71,14 +73,18 @@ my-project/
 
 ---
 
+## 🟢 Courses Not Completed
+- **React**
+- **Data Structures & Algorithms (Python)**
+- **Node.js**
+
 ## 🟢 Courses Tried
 - **Java**
 - **C++**
-
-## 🟢 Courses Untouched
 -**Gen AI**
+  
+## 🟢 Courses Untouched
 -**p5.js**
-
 
 ---
 
