@@ -17,6 +17,20 @@ def play_game():
 <body>
     <div class="app-container">
         <h1>Rock, Paper, Scissors</h1>
+        <section class="form-section">
+            <form>
+                <button></button>
+                <button></button>
+                <button></button>
+            </form>
+        </section>
+
+        {% if result %}
+        <section class="result">
+            <p>You chose: {{ user_choice }}</p>
+            <p>Computer chose: {{ computer_choice }}</p>
+            <h2>{{ result }}</h2>
+        </section>
     </div>
 </body>
 </html>"""
@@ -36,3 +50,10 @@ def find_winner(user_pick):
         pass
 
 print(find_winner("paper"))
+
+
+
+
+
+if __name__ == '__main__':
+    app.run(debug=True)
