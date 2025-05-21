@@ -1,11 +1,34 @@
-from flask import Flask
+from flask import Flask, request
 import random
 
 app = Flask(__name__)
 
 
+# Possible moves
+choices = ['rock', 'paper', 'scissors']
+
+# Decide the winner between "user" and "computer"
+def find_winner(user_pick):
+    # random moves computer
+    bot_move = random.choice(choices)
+    print(f"You picked: {user_pick}")
+    print(f"Computer chose: {bot_move}")
+
+    if user_pick == bot_move:
+        return "It's a draw!"
+    elif user_pick == "rock" and bot_move == "scissors":
+        return "You Win!"
+    elif user_pick == "paper" and bot_move == "rock":
+        return "You win!"
+    elif user_pick == "scissors" and bot_move == "paper":
+        return "You win!"
+    else:
+        return "You lose!"
+
+
 @app.route("/")
 def play_game():
+    # Use request method to handle GET & POST requests
     return """<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,30 +59,6 @@ def play_game():
 </html>"""
 
 
-# Possible moves
-choices = ['rock', 'paper', 'scissors']
-
-
-def find_winner(user_pick):
-    # random moves computer
-    bot_move = random.choice(choices)
-    print(f"You picked: {user_pick}")
-    print(f"Computer chose: {bot_move}")
-
-    if user_pick == bot_move:
-        return "It's a draw!"
-    elif user_pick == "rock" and bot_move == "scissors":
-        return "You Win!"
-    elif user_pick == "paper" and bot_move == "rock":
-        return "You win!"
-    elif user_pick == "scissors" and bot_move == "paper":
-        return "You win!"
-    else:
-        return "You lose!"
-
-
-
-print(find_winner("paper"))
 
 
 
