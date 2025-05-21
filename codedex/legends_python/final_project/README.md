@@ -19,12 +19,13 @@ It’s a simple Rock Paper Scissors game built with Python and Flask and display
 
 ```text
 final_project/
-├── static/
-│ └── main.css
 ├── app.py
-└── README.md
+├── README.md
+├── static/
+│   └── main.css
+└── templates/
+    └── index.html
 ```
-
 
 ## Navigate to the folder
 

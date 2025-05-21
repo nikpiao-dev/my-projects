@@ -25,10 +25,21 @@ def find_winner(user_pick):
     else:
         return "You lose!"
 
+def reset_game():
+    pass
 
-@app.route("/")
+@app.route("/", methods=["GET", "POST"])
 def play_game():
     # Use request method to handle GET & POST requests
+    result = None
+    user_pick = None
+    bot_move = None
+    
+    if request.method == "POST":
+        user_pick = request.form.get('choice')
+        bot_move = random.choice(choices)
+        result = find_winner(user_pick)
+
     return """<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -41,10 +52,10 @@ def play_game():
     <div class="app-container">
         <h1>Rock, Paper, Scissors</h1>
         <section class="form-section">
-            <form>
-                <button></button>
-                <button></button>
-                <button></button>
+            <form method="POST">
+                <button name="choice" value="rock"></button>
+                <button name="choice" value="paper"></button>
+                <button name="choice" value="scissors"></button>
             </form>
         </section>
 
