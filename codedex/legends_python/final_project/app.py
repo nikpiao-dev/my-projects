@@ -3,14 +3,13 @@ import random
 
 app = Flask(__name__)
 
-
-# Possible moves
+# Available moves for the game
 choices = ['rock', 'paper', 'scissors']
 
-# Decide the winner between "user" and "computer"
+# Determine the outcome of the game based on user and computer choices
 def find_winner(user_pick, bot_move):
     
-    # print the result:
+    # Display the choices for debugging or logging
     print(f"You picked: {user_pick}")
     print(f"Computer chose: {bot_move}")
 
@@ -25,7 +24,7 @@ def find_winner(user_pick, bot_move):
     else:
         return "You lose!"
 
-# Pick a color class based on whether you won, lost, or tied.
+# Pick a CSS class so the result text can be styled (green = win, red = lose, and yellow = draw)
 def pick_result_color(result_text):
     if "win" in result_text.lower():
         return "win"
@@ -34,7 +33,7 @@ def pick_result_color(result_text):
     else:
         return "draw"
 
-# Use request method to handle GET & POST requests
+# Main route to shows the game and handles the play
 @app.route("/", methods=["GET", "POST"])
 def play_game():
     result = None
@@ -48,13 +47,8 @@ def play_game():
         result = find_winner(user_pick, bot_move)
         color = pick_result_color(result)
 
+    # Show the page with all the info
     return render_template("index.html", user_pick=user_pick, bot_move=bot_move, result=result, color=color)
-
-
-
-
-
-
 
 if __name__ == '__main__':
     app.run(debug=True)
