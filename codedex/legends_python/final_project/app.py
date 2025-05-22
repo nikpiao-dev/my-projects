@@ -46,5 +46,5 @@ def play_game():
     # Show the page with all the info
     return render_template("index.html", user_pick=user_pick, bot_move=bot_move, result=result, color=color)
 
-# if __name__ == '__main__':
-#     app.run(debug=True)
+if __name__ == '__main__':
+    app.run(debug=True)
