@@ -29,7 +29,6 @@ final_project/
 ├── app.py
 ├── README.md
 ├── game.gif
-├── game_screenshot.png
 ├── static/
 │   └── main.css
 └── templates/
