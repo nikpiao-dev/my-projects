@@ -77,3 +77,7 @@ make sure to comment out this:
 if __name__ == '__main__':
     app.run(debug=True)
 ```
+
+# Then run the flask app again
+
+- python app.py  OR  - python3 app.py
