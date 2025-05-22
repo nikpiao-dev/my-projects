@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final project - Python</title>
+    <link rel="stylesheet" href="static/main.css">
+</head>
+<body>
+    <div class="app-container">
+        <h1>Rock, Paper, Scissors</h1>
+        <section class="form-section">
+            <form method="POST">
+                <button class="btn-1" name="choice" value="rock">Rock</button>
+                <button class="btn-1" name="choice" value="paper">Paper</button>
+                <button class="btn-1" name="choice" value="scissors">Scissors</button>
+            </form>
+        </section>
+
+        {% if result %}
+        <section class="result-section">
+            <p class="user">You chose: <strong><span class="underline">{{ user_pick }}</span></strong></p>
+            <p class="comp">Computer chose: <strong><span class="underline">{{ bot_move }}</span></strong></p>
+            <h2 class="result {{ color }}">{{ result }}</h2>
+        </section>
+        {% endif %}
+
+        <section class="reset-section">
+            <form method="GET" action="/">
+                <button class="btn-2" type="submit">Reset</button>
+            </form>
+        </section>
+    </div>
+</body>
+</html>

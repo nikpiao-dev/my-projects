@@ -1,4 +1,4 @@
-from flask import Flask, request
+from flask import Flask, render_template, request
 import random
 
 app = Flask(__name__)
@@ -8,16 +8,16 @@ app = Flask(__name__)
 choices = ['rock', 'paper', 'scissors']
 
 # Decide the winner between "user" and "computer"
-def find_winner(user_pick):
-    # random moves computer
-    bot_move = random.choice(choices)
+def find_winner(user_pick, bot_move):
+    
+    # print the result:
     print(f"You picked: {user_pick}")
     print(f"Computer chose: {bot_move}")
 
     if user_pick == bot_move:
         return "It's a draw!"
     elif user_pick == "rock" and bot_move == "scissors":
-        return "You Win!"
+        return "You win!"
     elif user_pick == "paper" and bot_move == "rock":
         return "You win!"
     elif user_pick == "scissors" and bot_move == "paper":
@@ -25,49 +25,30 @@ def find_winner(user_pick):
     else:
         return "You lose!"
 
-def reset_game():
-    pass
+# Pick a color class based on whether you won, lost, or tied.
+def pick_result_color(result_text):
+    if "win" in result_text.lower():
+        return "win"
+    elif "lose" in result_text.lower():
+        return "lose"
+    else:
+        return "draw"
 
+# Use request method to handle GET & POST requests
 @app.route("/", methods=["GET", "POST"])
 def play_game():
-    # Use request method to handle GET & POST requests
     result = None
     user_pick = None
     bot_move = None
+    color = None
     
     if request.method == "POST":
         user_pick = request.form.get('choice')
         bot_move = random.choice(choices)
-        result = find_winner(user_pick)
+        result = find_winner(user_pick, bot_move)
+        color = pick_result_color(result)
 
-    return """<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Final project - Python</title>
-    <link rel="stylesheet" href="static/main.css">
-</head>
-<body>
-    <div class="app-container">
-        <h1>Rock, Paper, Scissors</h1>
-        <section class="form-section">
-            <form method="POST">
-                <button name="choice" value="rock"></button>
-                <button name="choice" value="paper"></button>
-                <button name="choice" value="scissors"></button>
-            </form>
-        </section>
-
-        {% if result %}
-        <section class="result">
-            <p>You chose: {{ user_choice }}</p>
-            <p>Computer chose: {{ computer_choice }}</p>
-            <h2>{{ result }}</h2>
-        </section>
-    </div>
-</body>
-</html>"""
+    return render_template("index.html", user_pick=user_pick, bot_move=bot_move, result=result, color=color)
 
 
 

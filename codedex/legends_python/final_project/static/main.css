@@ -20,3 +20,50 @@ body, html {
 h1 {
     text-align: center;
 }
+
+.btn-1 {
+    margin: 2rem;
+    font-size: 1.3em;
+    padding: 1.2em;
+    border-radius: 70%;
+    cursor: pointer;
+    background-color: azure;
+}
+
+.btn-2 {
+    margin: 2rem;
+    font-size: 1.3em;
+    padding: 0.4em;
+    border-radius: 15px;
+}
+
+.form-section {
+    text-align: center;
+    margin: 5rem;
+}
+
+.result-section, .reset-section {
+    text-align: center;
+}
+
+.user, .comp, .result {
+    margin: 1.4em;
+    font-size: 1.5rem;
+}
+
+.underline {
+    text-decoration: wavy underline;
+    text-decoration-thickness: 2px; 
+    text-decoration-color: #4949d5;
+}
+/* color classes for the result */
+
+.result.win {
+    color: #29d329;
+}
+.result.lose {
+    color: #f54141;
+}
+.result.draw {
+    color: #daa520;
+}
