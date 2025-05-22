@@ -9,10 +9,6 @@ choices = ['rock', 'paper', 'scissors']
 # Determine the outcome of the game based on user and computer choices
 def find_winner(user_pick, bot_move):
     
-    # Display the choices for debugging or logging
-    print(f"You picked: {user_pick}")
-    print(f"Computer chose: {bot_move}")
-
     if user_pick == bot_move:
         return "It's a draw!"
     elif user_pick == "rock" and bot_move == "scissors":
@@ -50,5 +46,5 @@ def play_game():
     # Show the page with all the info
     return render_template("index.html", user_pick=user_pick, bot_move=bot_move, result=result, color=color)
 
-if __name__ == '__main__':
-    app.run(debug=True)
+# if __name__ == '__main__':
+#     app.run(debug=True)
