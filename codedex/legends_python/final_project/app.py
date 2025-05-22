@@ -21,7 +21,7 @@ def find_winner(user_pick, bot_move):
         return "You lose!"
 
 # Pick a CSS class so the result text can be styled (green = win, red = lose, and yellow = draw)
-def pick_result_color(result_text):
+def result_color(result_text):
     if "win" in result_text.lower():
         return "win"
     elif "lose" in result_text.lower():
@@ -41,7 +41,7 @@ def play_game():
         user_pick = request.form.get('choice')
         bot_move = random.choice(choices)
         result = find_winner(user_pick, bot_move)
-        color = pick_result_color(result)
+        color = result_color(result)
 
     # Show the page with all the info
     return render_template("index.html", user_pick=user_pick, bot_move=bot_move, result=result, color=color)
