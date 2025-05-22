@@ -1,12 +1,17 @@
 
 # Rock Paper Scissors Game
 
-![Project Screenshot](screenshot.png)
+![Project Screenshot](game.gif)
 
 
 This is the final project for the Codedex Python course.
 
-It’s a simple Rock Paper Scissors game built with Python and Flask and displayed on a webpage.
+🔍 Overview
+
+- It’s a simple Rock Paper Scissors game built with Python and Flask and displayed on a webpage.
+
+- You click a button to make your move, and the computer picks one at random. Then the app shows who won.
+
 
 
 ## Technologies Used
