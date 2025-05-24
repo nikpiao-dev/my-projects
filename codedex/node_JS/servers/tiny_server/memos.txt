@@ -1,0 +1,122 @@
+# Deep Dive
+
+# How HTTP Works
+Ever wonder why we type http or https in a URL like https://www.netflix.com? Well, they tell your browser how to communicate with the website you're trying to visit.
+
+HTTP stands for HyperText Transfer Protocol. It's the protocol (aka the set of rules) browsers and servers use to talk to each other. Again:
+
+📩 An HTTP request is what happens when your browser sends a request to a server for a resource.
+📤 An HTTP response is what the server sends back to your browser after it gets your request.
+http request and response
+
+## Clients vs. Servers
+Okay, the words clients and servers get thrown around a lot in the world of web dev.
+
+At a basic level, a server is a computer or system that provides resources, data, or services to other computers – known as clients – over a network.
+
+Here are some examples of different type of servers:
+
+A web server sends websites to your browser and others’ browsers.
+A file server lets you and others upload or download files.
+A game server manages multiplayer game worlds.
+So in the normal context:
+
+The client is typically your browser (e.g., Chrome or Safari).
+It sends a request to a server for a web page.
+Like "Hey server, can you send me the homepage of https://www.netflix.com?"
+The server is a computer that listens for these requests.
+It sends back responses, like HTML, images, or data from a database.
+Like "No prob! Here’s the Netflix homepage you asked for!"
+But in the Node.js world, since you are building your own server, the roles are flipped:
+
+The client is other people’s browsers making a request to you.
+The server is YOU 🫵, or at least the code you write in Node.js that listens and responds.
+You’re no longer just ordering drinks…you’re running the whole shop. Pretty cool, right? :)
+
+Now back to the request and responses.
+
+## HTTP Request
+An 📩 HTTP request is made by the client when it wants something from the server. It’s made up of a few different parts.
+
+First, let’s touch on the methods:
+
+GET is used to request data from a server.
+Example: View the webpage of the URL you typed in.
+POST is used to send data to a server. Unlike GET, which only lets you retrieve data, POST lets you send info that the server can process or store.
+Example: User input forms like usernames/passwords.
+DELETE is used to remove a resource from a server.
+Example: Delete an inappropriate or spammy comment.
+We’ll dive deeper into how to use these methods in the next chapter!
+
+Let’s also discuss some examples of routes:
+
+/login
+/home
+/about
+/api/users
+Routes are URLs within a main site that take us to specific pages! Some routes are self-explanatory, like /login, /home, or /about. For example, https://netflix.com/login takes us to a login page.
+
+Other routes, like api/users contain information that isn’t legible as a normal webpage, but contains data that is used internally in a website. Here is an example site, which outputs the api/users route as a JSON file of sample users: https://reqres.in/api/users
+
+Let's take a look at the different parts of an HTTP request in table:
+
+Part	Example
+Method	GET, POST, DELETE
+URL	/login, /home, /about, /api/users
+Headers	HTML/1.1
+Body (Optional)	Data sent to the server
+So when a person visits a website, here’s what happens:
+
+sending http request
+
+A simple request might look like this:
+
+GET /about HTTP/1.1
+
+Host: temu.com
+User-Agent: Mozilla/5.0
+Accept: text/html
+
+The request above is asking for the "About" page from temu.com, using a Mozilla browser, and expecting an HTML response.
+
+If we’re in the U.S. and we go to Temu, a Chinese discount store, our browser sends this request ☝️ and it travels through undersea fiber optic cables across the ocean, in a snap of a finger.
+
+Note: We will never see this request text casually browsing a website, but your browser is sending a HTTP request in this structure under the hood when you visit a webpage, only viewable using Developer tools.
+
+
+
+## HTTP Response
+An 📤 HTTP response is sent by the server back to the client, with the data requested.
+
+Part	Example
+Status Code	200 OK, 404 Not Found, 500 Internal Server Error
+Headers	Content-Type: text/html
+Body	HTML, image, JSON, etc.
+That’s where the classic 404 page comes from!
+
+
+
+Here’s an example of a response:
+
+HTTP/1.1 200 OK
+Content-Type: text/html
+
+<!DOCTYPE html>
+<html>
+  <body>
+    <p>Welcome to Temu!</p>
+    <p>Best selling items...</p>
+  </body>
+</html>
+
+sending http request
+
+This basically says: Here you go! Everything’s fine (200 OK). This is the HTML web page you requested.
+
+And if the HTML is more complete, this is what you see when the page loads the response you requested.
+
+Temu website
+
+Isn’t it wild that this is how the whole internet works? 🤯
+
+
