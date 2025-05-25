@@ -1,0 +1,104 @@
+# Request Object
+When building a web server in Node.js using the HTTP module, we need a way to handle incoming requests from clients (like browsers). This is where the request object comes in.
+
+The request object represents the HTTP request made by a client. It contains important details, such as:
+
+The URL the client is requesting (like /about, /contact, /login)
+The HTTP method used (like GET, POST, DELETE)
+Headers that provide additional information (like browser type, content type)
+In a basic Node.js server, the request object is available inside the callback function of http.createServer().
+
+const http = require('http');
+
+const server = http.createServer((request, response) => {
+  console.log('Requested URL: ' + request.url);
+  console.log('Request Method: ' + request.method);
+
+  response.writeHead(200, { 'Content-Type': 'text/plain; charset=utf-8' });
+  response.end('Request received!');
+});
+
+What’s happening in this code?
+
+The request object holds details about the request.
+request.url logs which page the client is trying to access (e.g., /home, /about).
+request.method logs how the request was made (e.g., GET, POST).
+In the Tiny Server exercise, when we run the script, nothing appears in the terminal. This code makes sure that the server responds with a plain text message confirming the request.
+
+server.listen(3000, function () {
+  console.log('Server running at http://localhost:3000');
+});
+
+Localhost refers to your own computer – specifically, it’s the address your computer uses to refer to itself when hosting a website locally.
+
+Why is the request object important? By using request, we can:
+
+Serve different pages based on the requested URL.
+Handle user input from forms (POST requests).
+Read headers to customize responses (e.g., detecting the user's browser).
+The request object is the starting point for handling user requests and building interactive web applications in Node.js!
+
+# Running a Server
+First thing first, to use the powerful http module, we need to import it:
+
+const http = require('http'); 
+
+Then, we can turn our computer into a server using the .createServer() method:
+
+const server = http.createServer((request, response) => {
+  
+});
+
+(request, response) => {} part is a callback function that runs every time someone visits our server.
+📩 request is the request (what the visitor sends, like "Give me this page!").
+📤 response is the response (what the server sends back, like "Here’s your page!").
+So if we write:
+
+const server = http.createServer((request, response) => {
+  response.writeHead(200, { 'Content-Type': 'text/plain; charset=utf-8' });
+  response.end('Message in the bottle received! Loud and clear, captain! 🫡'); 
+});
+
+response.writeHead(200, {...}) prepares the response.
+200 stands for status code 200 OK (means everything is good).
+{ 'Content-Type': 'text/plain; charset=utf-8' } tells the browser "I’m sending plain text that may include letters from any language and emojis."
+Next, send a response when the user visits the server.
+
+response.end('Hello, World!') sends back the message "Hello, World!" and ends the response. This is what the user sees in the browser when they visit the server.
+Remembers that this essentially creates:
+
+HTTP/1.1 200 OK
+Content-Type: text/html
+
+Message in the bottle received! Loud and clear, captain! 🫡
+
+In our last three lines of code, we start the server.
+
+server.listen(3000, () => {
+  console.log('Server running at http://localhost:3000/');
+});
+
+server.listen(3000, () => {...}) tells the server to start listening for requests on port 3000.
+The console.log() statement prints a message in the terminal to let us know the server is running.
+The localhost just means your own computer and 3000 port number like door 3000.
+
+Here’s how the code looks all together:
+
+const http = require('http'); // Import the http module
+
+// Create a server
+const server = http.createServer((request, response) => {
+  response.writeHead(200, { 'Content-Type': 'text/plain; charset=utf-8' });
+  response.end('Hello, World!'); 
+});
+
+// Start the server and listen on port 3000
+server.listen(3000, () => {
+  console.log('Server running at http://localhost:3000');
+});
+
+For the final part, we need to run this using node filename.js in the terminal. If everything worked correctly, you should see the message Server running at http://localhost:3000/ in your terminal.
+
+To exit the server, you can use ctrl + c and the terminal will return back to the blinking cursor state.
+
+Phew! Running your own server is hard work! 😮‍💨
