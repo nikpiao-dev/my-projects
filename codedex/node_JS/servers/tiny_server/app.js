@@ -8,8 +8,11 @@ const server = http.createServer((request, response) => {
 });
 
 
-server.listen(3000);
+//server.listen(3000);
 
+server.listen(3000, function () {
+  console.log('Server running at http://localhost:3000');
+});
 
 // Go to http://localhost:3000
 
