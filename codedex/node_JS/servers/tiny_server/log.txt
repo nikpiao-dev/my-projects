@@ -1,0 +1,93 @@
+ Cyber Ramen Shop
+# Response Object
+We just learned about the request object, now let's go over the response object.
+
+The response object is what we use to send data (HTML, plain text, JSON, or other formats) back to the client (such as a browser).
+
+Remember that this is an example of a response:
+
+HTTP/1.1 200 OK
+Content-Type: text/html
+
+<!DOCTYPE html>
+<html>
+  <body><strong>Ayoooo, who let the devs out?</strong></body>
+  <img src="https://i.imgur.com/7P1BnOY.jpeg">
+</html>
+
+The response object represents the server’s reply to a request. It contains methods and properties that allow us to control what gets sent back to the client.
+
+With the response object, we can:
+
+Set headers like Content-Type to tell the client what kind of data it’s receiving, aka whether it’s receiving HTML, plain text, JSON, or another format, and specify encoding (optional).
+Write content using response.write().
+Finalize and send the response with response.end().
+# Headers
+By default, Node.js does not specify what type of data it’s sending. We need to set the Content-Type so the browser knows how to interpret the response.
+
+Here are the types of data we can specify in the Content-Type:
+
+'text/plain' - The response is plain text.
+'text/html' - The response contains HTML.
+'application/json' - The response is JSON data.
+And within those types of data, we can specify encoding:
+
+charset=utf-8 - this is the one we always use, because it can represent every character in the Unicode standard (which includes most written characters from all human languages, and emojis! 🤗).
+Note: If you don't specify encoding, Node.js or your browser may default to a legacy encoding that doesn't support emojis or non-Latin alphabets.
+
+We use response.writeHead to specify the Content-Type.
+
+    response.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
+
+Let's break this down step by step:
+
+The code above is part of the response object, which is used to send a response back to the client.
+
+response.writeHead(statusCode, headers)
+
+.writeHead() is a method that sets the status code and headers for the HTTP response before sending data.
+
+The first argument is the HTTP status code. Here are some common examples of status codes:
+
+🟢 200 means OK; Sent when the request was successful.
+🔴 404 means Not Found; Sent when the page you’re looking for in not found
+⚫️ 500 means Internal Server Error; Sent when there’s a problem with the server trying to service the request.
+The second argument is an object containing response headers. Headers provide metadata about the response.
+
+Here, 'Content-Type': 'text/plain' tells the browser that the response is plain text instead of HTML, JSON, or other formats.
+
+When this runs, the server sets the response headers before sending any data. The browser knows to interpret the response as plain text instead of trying to render HTML.
+
+After calling response.writeHead(), you can use response.write() and response.end() to send the actual response content.
+
+# Write and End
+The response.write() method lets us send a part of the response before ending it.
+
+We can call it multiple times to send multiple chunks of data.
+
+response.write('Hello, visitor!');
+response.write('Hope you are having a great day!');
+
+The response.end() method sends the final response and tells the client that there is no more data coming. We can also send data directly inside response.end(), like this:
+
+response.end('This is the end of the response!');
+
+Once response.end() is called, no more data can be written to the response.
+
+Here they are combined:
+
+const server = http.createServer((request, response) => {
+  response.writeHead(200, { 'Content-Type': 'text/plain; charset=utf-8' });
+  response.write('Hello, visitor! ');                                                // Sending the first part
+  response.write('Hope you are having a great day!');            // Sending another part
+  response.end();                                                                           // Ends the response
+});
+
+response.writeHead()sets the status code and headers for the HTTP response before sending data.
+response.write() sends part of the response and can be called multiple times.
+response.end() sends the final response and closes the connection.
+So, when do we use response.write() versus response.end()? Well:
+
+If you use response.write(), you must call response.end() to finish the response.
+If you use only response.end(), you don’t need response.write().
+Let's use what we just learned about Content-Type, response.write(), and response.end(), to run a simple server containing the menu!
