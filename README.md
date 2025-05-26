@@ -6,11 +6,12 @@ This repository is a personal coding portfolio built through lessons and challen
 
 ```text
 my-project/
-├── README.md
-└── codedex/ 
+└── codedex/
+    ├── gen_ai/
     ├── github_course/
+    ├── legends_python/
+    ├── node_JS/
     ├── origins_trilogy/
-    ├── legend_python/
     └── others/
 ```
 
