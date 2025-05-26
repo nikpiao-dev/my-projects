@@ -1,0 +1,11 @@
+../../../gen_ai/tokenization/ngrams.py
+../../../legends_python/env/bin/nltk
+../../../legends_python/env/bin/tqdm
+../../../legends_python/env/lib/python3.9/site-packages/joblib-1.5.0.dist-info/
+../../../legends_python/env/lib/python3.9/site-packages/joblib/
+../../../legends_python/env/lib/python3.9/site-packages/nltk-3.9.1.dist-info/
+../../../legends_python/env/lib/python3.9/site-packages/nltk/
+../../../legends_python/env/lib/python3.9/site-packages/regex-2024.11.6.dist-info/
+../../../legends_python/env/lib/python3.9/site-packages/regex/
+../../../legends_python/env/lib/python3.9/site-packages/tqdm-4.67.1.dist-info/
+../../../legends_python/env/lib/python3.9/site-packages/tqdm/
