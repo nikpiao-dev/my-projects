@@ -8,7 +8,7 @@ const http = require('http');
 
 // create a server
 
-const server = http.createServer((res, req) => {
+const server = http.createServer((req, res) => {
     // Default response settings
     let statusCode = 200;
     let contentType = 'text/html; charset=utf-8';
