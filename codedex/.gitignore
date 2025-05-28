@@ -26,3 +26,17 @@ __pycache__/
 ../../gen_ai/
 ../../legends_python/
 
+
+# Ignore the gen_ai folder at root level
+gen_ai/
+
+# Ignore any Python virtual environments (optional)
+env/
+venv/
+__pycache__/
+*.py[cod]
+*.log
+
+# Ignore system files (macOS)
+.DS_Store
+
