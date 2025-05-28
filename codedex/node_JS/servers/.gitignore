@@ -1,0 +1,28 @@
+# Ignore node modules (if Node.js is used)
+node_modules/
+
+# Ignore Python virtual environments (if any)
+env/
+venv/
+
+# Ignore site-packages or dist-info (if Python libraries were accidentally copied)
+**/site-packages/
+*.dist-info/
+
+# Ignore bytecode and temporary files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Ignore macOS system files
+.DS_Store
+
+# Ignore logs, junk files
+*.log
+*.tmp
+*.swp
+
+# Specific to your extra files (adjust if these are subdirectories of servers)
+../../gen_ai/
+../../legends_python/
+
