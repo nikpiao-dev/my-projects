@@ -1,0 +1,102 @@
+# Sockets Notes
+
+Sockets - can be used to connect two nodes together.
+    # are a fundamental networking concept used for 
+    # communication between computers in a network.
+
+    # socket object
+        # - socket.socket() function, 
+            # takes two parameters(address family and socket type)
+
+    # address family:
+     # (socket.AF_INET for IPv4)
+
+    # socket type:
+     # (e.g., socket.SOCK_STREAM for TCP)
+     # or (socket.SOCK_DGRAM for UDP)
+
+
+- example: 
+
+    """ 
+        # import socket
+
+        # Create a TCP socket
+        tcp_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+
+
+        # Create a UDP socket
+        udp_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+
+    """
+
+   # - Socket Communication:
+
+        # Once you have a socket object, you can use various methods to establish connections, send data, and receive data. Here are some commonly used methods:
+    """
+            # socket.connect(address): Establishes a connection to a remote address.
+
+            # socket.bind(address): Binds the socket to a specific address and port.
+
+            # socket.listen(backlog): Listens for incoming connections on a TCP socket.
+
+            # socket.accept(): Accepts an incoming connection and returns a new socket object for communication.
+
+            # socket.send(data): Sends data over the socket.
+
+            # socket.recv(buffer_size): Receives data from the socket.
+    """
+
+
+# - Here's an example of a basic TCP server that listens for incoming connections:
+
+"""
+import socket
+
+
+# Create a TCP socket
+server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+
+
+# Bind the socket to a specific address and port
+server_address = ('localhost', 1234)
+server_socket.bind(server_address)
+
+
+# Listen for incoming connections
+server_socket.listen(5)
+
+
+while True:
+    # Accept a client connection
+    client_socket, client_address = server_socket.accept()
+
+
+    # Receive and send data
+    data = client_socket.recv(1024)
+    client_socket.send(b"Received: " + data)
+
+
+    # Close the client socket
+    client_socket.close()
+
+"""
+
+
+
+
+# - Socket Programming:
+
+import socket
+
+HOST = "127.0.0.1"
+PORT = "7777"
+
+s = socket.socket(socket.AF_INETm socket.SOCK_STREAM) 
+    # af_inet is ipv4, sock_stream is a port
+
+s.connect((HOST, PORT))
+
+
+# use "netcat or nc" to open port
+
