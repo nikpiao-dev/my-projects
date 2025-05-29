@@ -67,6 +67,7 @@ my-project/
 - **Command Line**  
 - **Git & GitHub Course**  
 - **SQL**
+- **Intermediate Javascript**
 
 ---
 
