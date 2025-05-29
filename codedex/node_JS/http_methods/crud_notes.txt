@@ -1,0 +1,51 @@
+# What is CRUD?
+In the last chapter, we learned how to build our own web server and handle HTTP requests & responses. But right now, our server only sends basic responses – it doesn’t store, update, or remove any data. It doesn't have the functionality of our favorite websites… yet! 😬
+
+What if we wanted to take in data, send back specific information, or even delete something? That’s where CRUD comes in.
+
+CRUD, which stands for Create, Read, Update, and Delete, is a concept around these four actions:
+
+Create: Add new data.
+Read: Retrieve existing data.
+Update: Change existing data.
+Delete: Remove data.
+CRUD is not really tied to any language or tool, it's more like a fundamental programming idea that you will see in a lot of places in software. It was coined in the 1980s when dealing with databases.
+
+Let's look back at the different parts of an HTTP request from the last chapter:
+
+Part	Example
+Method	GET, POST, DELETE, 🆕PUT/PATCH
+URL	/login, /home, /about, /api/users
+Headers	HTML/1.1
+Body (Optional)	Data sent to the server
+See that part in Method like GET, POST, DELETE, and PUT/PATCH (new ones)? It's kinda similar to CRUD!
+
+Each HTTP method is mapped directly to a CRUD operation when building servers.
+
+CRUD	HTTP Method	What it does
+Create	POST	Add new data (e.g. publish a post to the grid)
+Read	GET	Retrieve data (e.g. view a list of the people who have liked your post)
+Update	PUT or PATCH	Edit existing data (e.g. edit the caption of your post)
+Delete	DELETE	Remove data (e.g. delete an offensive comment or delete your post entirely)
+So, while CRUD describes the type of data operation, HTTP methods are the methods you use to make that operation happen over the web. In other words, CRUD is like the what, the HTTP methods are the how.
+
+CRUD Database example
+
+This chapter won't involve HTML in the browser like the last chapter did. This chapter is purely about servers and learning CRUD.
+
+To keep things simple, we'll stay in the terminal for most of the chapter!
+
+Instructions
+Go on your favorite website or app, like Discord, Codédex Community, etc, and write out the different interactions on the site to CRUD. No code needed, just type them out in a list.
+
+Or, if you're feeling like taking on an extra challenge, write them out with console.log() statements on a simple server using what we learned in the previous chapter.
+
+Here's how you can format your answer:
+
+App Name: ____________________
+Create:   ____________________
+Read:     ____________________
+Update:   ____________________
+Delete:   ____________________
+
+
