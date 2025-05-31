@@ -1,0 +1,107 @@
+POST Tweet
+# POST Requests
+A POST request is how you send data to a server. Think of it like saying “Hey server, here's something new. Please take it and maybe save it!”
+
+Let's break down the difference between GET and POST. The purpose of GET is to, well, get data! Like, "show me the homepage." The purpose of POST is to send data. Like, "here's my signup info."
+
+POST is used when you want to:
+
+Create a new post or comment
+Submit a signup or login form
+Send a message
+We structure POST requests pretty similarly to GET requests, but there are a few key differences.
+
+Let's take a look at an example of a POST request.
+
+const http = require('http');
+
+const server = http.createServer((request, response) => {
+  if (request.method === 'POST') {
+    let message = '';
+
+
+    request.on('data', (chunk) => {
+      message += chunk;
+    });
+
+    request.on('end', () => {
+      console.log('New message:', message); // Log the message to the console
+
+      response.writeHead(200, { 'Content-Type': 'text/plain' });
+      response.end('Message received!');
+    });
+  } else {
+    response.writeHead(404, { 'Content-Type': 'text/plain' });
+    response.end('Go back to your terminal!');
+  }
+});
+
+server.listen(3000, () => {
+  console.log('Server is running at http://localhost:3000');
+});
+
+Woah! What's all this? The if statement looks familiar, but we're introducing some new syntax, like data, chunk, and request.on. Let's break it down!
+
+if (request.method === 'POST') 
+
+Checks if the method is POST (meaning the client is sending data). The client will always send it in chunks. If it is, we’ll collect and process the incoming message.
+
+let message = '';
+request.on('data', (chunk) => {
+  message += chunk;
+});
+
+Collects the message data. message will hold the body of the POST request (the message someone is sending). request.on('data', ...) collects the chunks of data that the client sends. We add them together (+= chunk) in case it arrives in pieces (this can happen if a large amount of data is sent, and Node.js breaks it down into small packets for the server to collect).
+
+After the message is fully received, we write:
+
+request.on('end', () => {
+  console.log('New message:', message);
+  ...
+});
+
+This runs when all the data has been received, and it logs the full message to the console.
+
+The code below that line is the same as what we learned in the last chapter – sending a response back, creating a 404 error, and starting the server.
+
+Now that you have all this code though, you might be thinking you'll create an app.js file and run it with the terminal. That's a good first step, but in order to use any of the CRUD methods besides GET, we'll need to use something called cURL.
+
+# cURL
+For POST requests, we need to use something called cURL, which stands for Client for URLs. The difference between using node app.js and using cURL to run a file is:
+
+node app.js
+
+is how you start your server. When you type node.app.js, you're telling Node.js to run your code (in app.js) so your server starts and begins listening for requests.
+
+Think of it like “Lights, camera, action!” 🎬 where you're turning on the server.
+
+But, using methods like POST, PUT, PATCH, and DELETE requires you to send a request to your server, using cURL.
+
+cURL is a tool you use in the terminal to talk to a server. It stands for "client URL". It was created in 1997 as a way to fetch currency exchange rates from a web page.
+
+Think of it like this:
+
+You = the user 👩‍🎤
+Node.js = the server 🖥️
+cURL = the way you send messages (like "Hey, here's some data!") 📤
+The flow is slightly different than we're used to, but we'll still start with the terminal!
+
+As usual, start the server with node app.js.
+
+Then, open a second terminal window (wild, I know) and send a request using:
+
+curl -X POST http://localhost:3000 -d "This is a message"
+
+curl: the keyword to send HTTP requests from the terminal
+-X: the flag that lets us specify the HTTP method we want to use (here, it's POST)
+http://localhost:3000: where we’re sending the request
+-d "This is a message": the data we’re sending in the body of the request
+You can put whatever you want inside those quotes! Your server will process the request, log a message to the terminal console, and send back a response.
+
+If we follow this process with the example from before, this is what I see on my screen:
+
+example terminal and browser windows
+
+Please, hold your applause for the cheeky message reminding you to return to the terminal instead of staying on the browser.
+
+If you want to learn more about cURL, check out this article.
