@@ -1,0 +1,170 @@
+# PUT Requests
+Once you understand POST, you’re ready to explore two more request types: PUT and PATCH. These both deal with updating things – but in slightly different ways.
+
+A PUT request is like saying:
+"Here’s the new version of this thing – replace the old one completely."
+
+It's a total makeover. 🧼
+
+We use PUT when we want to:
+
+Update a profile picture
+Replace your entire resume on a job site
+Update a saved address with all new info (street, city, zip)
+Reset a game character’s stats from scratch
+Here’s an example where we use PUT to fully update (overwrite) our username:
+
+const http = require('http');
+
+let username = 'lumon-is-life';
+
+const server = http.createServer((request, response) => {
+  if (request.method === 'PUT') {
+    let newUsername = '';
+
+    request.on('data', (chunk) => {
+      newUsername += chunk;
+    });
+
+    request.on('end', () => {
+      console.log('Original Username:', username);
+      username = newUsername;
+      console.log('Updated Username:', username);
+
+      response.writeHead(200, { 'Content-Type': 'text/plain' });
+      response.end('Username updated!');
+    });
+  } else {
+    response.writeHead(404, { 'Content-Type': 'text/plain' });
+    response.end('Go back to your terminal!');
+  }
+});
+
+server.listen(3000, () => {
+  console.log('Server running on http://localhost:3000');
+});
+
+Let's break it down:
+
+let username = lumon-is-life;
+
+We declare a variable that holds a default username: "lumon-is-life". This is the value we'll update later.
+
+if (request.method === 'PUT')
+
+checks if the request is a PUT request.
+
+let newUsername = ' '
+
+sets up a variable to hold the new username. We'll collect the data from the PUT request into this string.
+
+    request.on('data', (chunk) => {
+      newUsername += chunk;
+    });
+
+Listens for incoming data. When the client sends the new username, it might come in little chunks. This collects all the chunks into one string.
+
+​​request.on('end', () => {
+  console.log('Original Username:', username);
+  username = newUsername;
+  console.log('Updated Username:', username);
+
+Once all the data has been received, it logs the original username with console.log('Original Username:', username) so you can see what the value was before any changes.
+
+Then it updates the username by setting it to the value received in the request: username = newUsername;.
+
+It logs the new value using console.log('Updated Username:', username); so you can confirm that the update worked.
+
+  response.writeHead(200, { 'Content-Type': 'text/plain' });
+  response.end('Username updated!');
+});
+
+Finally, it sends a response back to the client with response.writeHead(200, { 'Content-Type': 'text/plain' }); and response.end('Username updated!'); to let them know the update was successful.
+
+Remember, we'll need to open a new terminal window and write a cURL command to replace the username:
+
+curl -X PUT http://localhost:3000 -d "frolic-fan"
+
+In our console, we should see
+
+Original Username: lumon-is-life
+Updated Username: frolic-fan
+
+# PATCH Requests
+A PATCH request is like saying:
+"I just want to change one little thing — don’t replace the whole thing."
+
+We use PATCH to:
+
+Edit an existing post, tweet, etc.
+Add a line to your bio
+Update just the ingredients in a recipe
+Add a new social link to your profile
+Change just a game character's hair color
+Let's revisit the username example, but with PATCH instead of PUT.
+
+const http = require('http');
+
+let username = '@rihanna';
+
+const server = http.createServer((request, response) => {
+  if (request.method === 'PATCH') {
+    let patchData = '';
+
+    request.on('data', (chunk) => {
+      patchData += chunk;
+    });
+
+    request.on('end', () => {
+      console.log('Original Username:', username);
+
+      // Only update the username with the patch data (assuming it's a string to append)
+      username += patchData;
+      
+      console.log('Updated Username:', username);
+
+      response.writeHead(200, { 'Content-Type': 'text/plain' });
+      response.end('Username patched!');
+    });
+  } else {
+    response.writeHead(404, { 'Content-Type': 'text/plain' });
+    response.end('Go back to your terminal!');
+  }
+});
+
+server.listen(3000, () => {
+  console.log('Server running on http://localhost:3000');
+});
+
+Here's the cURL command:
+
+curl -X PATCH http://localhost:3000 -d "1234"
+
+And here's what we'd see in the console:
+
+Original Username: @rihanna
+Updated Username: @badgalriri
+
+Woah, this looks pretty similar to the PUT example from before! But there are some key differences in the code.
+
+In the PUT example, the if condition checks for the PUT method:
+
+if (request.method === 'PUT')
+
+In the PATCH example, it checks for the PATCH method:
+
+if (request.method === 'PATCH')
+
+Also, the username is updated differently!
+
+In the PUT example, the old username is replaced completely with the new newUsername:
+
+username = newUsername; 
+
+In the PATCH example, the newUsername string is added to the existing username, so only part of the username is modified:
+
+username += newUsername; 
+
+When you're handling both PUT and PATCH requests, the way you collect the data (using request.on('data') and request.on('end')) is pretty much the same. The big difference comes in how the resource gets updated: PUT replaces the entire thing, while PATCH only makes changes to part of it.
+
+
