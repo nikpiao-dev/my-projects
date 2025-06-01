@@ -17,7 +17,7 @@ my-project/
 │   ├── origins_trilogy/
 │   ├── sql/
 │   ├── others/
-│   └── react/
+│   └── react-project/
 ```
 
 ## 🧠 Folder Descriptions
@@ -31,7 +31,7 @@ my-project/
 - **`legend_python/`**  
   Focused on Python fundamentals and intermediate concepts. Includes completed Intermediate Python and NumPy courses, with the core Python course currently in progress.
 
-- **`react/`**  
+- **`react-project/`**  
   Contains React projects and exercises. Covers JSX, components, props, state management, and event handling based on current React coursework.
 
 - **`node_JS/`**  
