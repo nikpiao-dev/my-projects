@@ -8,14 +8,16 @@ This repository is a personal coding portfolio built through lessons and challen
 my-project/
 ├── README.md
 ├── notes.txt
-└── codedex/
-    ├── gen_ai/
-    ├── github_course/
-    ├── legends_python/
-    ├── node_JS/
-    ├── origins_trilogy/
-    ├── others/
-    └── react/
+├── tcm_academy/
+├── codedex/
+│   ├── gen_ai/
+│   ├── github_course/
+│   ├── legends_python/
+│   ├── node_JS/
+│   ├── origins_trilogy/
+│   ├── sql/
+│   ├── others/
+│   └── react/
 ```
 
 ## 🧠 Folder Descriptions
@@ -29,7 +31,7 @@ my-project/
 - **`legend_python/`**  
   Focused on Python fundamentals and intermediate concepts. Includes completed Intermediate Python and NumPy courses, with the core Python course currently in progress.
 
-- **`react_project/`**  
+- **`react/`**  
   Contains React projects and exercises. Covers JSX, components, props, state management, and event handling based on current React coursework.
 
 - **`node_JS/`**  
@@ -40,6 +42,9 @@ my-project/
 
 - **`others/`**  
   Miscellaneous files and practice exercises that don't fit into the other categories. This might include experimental scripts, side projects, or learning notes.
+
+-- **`sql/`**
+    Contains exercises and notes from the SQL-focused course on Codédex. Topics include foundational database concepts, SQL query building, database management, and optimization techniques.
 
 ---
 
