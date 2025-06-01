@@ -1,0 +1,35 @@
+SELECT
+# The Asterisk *
+The SELECT statement we ran is core to SQL:
+
+SELECT * FROM shows;
+
+The semicolon ; determines the end of a SQL statement. So here, we broke the statement into two lines, and it still does the same thing:
+
+SELECT *
+FROM shows;
+
+SELECT retrieves data from a database.
+
+* asterisk means all columns.
+FROM keyword followed by the table name.
+shows is the name of the table we are requesting data from.
+; we end the statement with a semicolon.
+Simply put, we are selecting all the columns from the shows table.
+
+# Specific Columns
+The * grabs all the columns in a table, but what if we want to select just a few of the columns?
+
+If we only want to select specific columns, we can list out the column names, separated by commas:
+
+SELECT column1, column2, column3
+FROM table_name;
+
+Here’s an example:
+
+SELECT id, name, genre
+FROM shows;
+
+We only select the id, name, and genre columns from the shows table.
+
+Note: SQL keywords like SELECT and FROM are not case-sensitive, but it's common to write them in uppercase to distinguish them from column names (id, name, genre) and table names (shows), which are written in lowercase.
