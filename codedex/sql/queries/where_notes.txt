@@ -1,0 +1,35 @@
+# WHERE
+Now what if we wanted to filter information based on a condition? We can use the WHERE clause.
+
+Where?
+
+We can use the WHERE clause to filter for information based on a condition:
+
+SELECT *
+FROM shows
+WHERE id = 23;
+
+id = 23 is the condition. Only shows with an id equal to 23 will be returned.
+
+Here’s another example:
+
+SELECT *
+FROM shows
+WHERE year > 2020;
+
+year > 2020 is the condition. Only the shows that were released later than 2020 will be returned.
+
+Note: The WHERE keyword always goes after the FROM part of the query.
+
+# Comparison Operators
+Here are all the SQL comparison operators that we can use in a condition:
+
+= equal to
+!= not equal to
+> greater than
+< less than
+>= greater than or equal to
+<= less than or equal to
+We use them to compare two values in the WHERE clause.
+
+Let’s try them out.

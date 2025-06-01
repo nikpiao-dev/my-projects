@@ -1,0 +1,18 @@
+# Unique Values
+When analyzing a database, we may want to view just the unique values within a column.
+
+DISTINCT is used to return just the unique values in a column, so no duplicates.
+
+Here's how we select all the genres from shows:
+
+SELECT genre
+FROM shows;
+
+We'd get 50 rows of genres for each TV show with a bunch of duplicates.
+
+If we add a DISTINCT keyword after SELECT:
+
+SELECT DISTINCT genre
+FROM shows;
+
+Only the unique genres in the shows table will be returned.
