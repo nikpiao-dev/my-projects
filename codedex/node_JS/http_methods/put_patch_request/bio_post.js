@@ -1,7 +1,6 @@
 // Use patch to modify a short bio
 
 const http = require('http');
-const { console } = require('inspector');
 
 let post = '📍 Lost in a world of good vibes';
 
@@ -21,8 +20,8 @@ const server = http.createServer((request, response) => {
 
             console.log('Updated bio:', post)
 
-            request.writeHead(200, { 'Content-Type': 'text/plain' });
-            request.readableEnded('New bio patched!');
+            response.writeHead(200, { 'Content-Type': 'text/plain' });
+            response.end('New bio patched!');
         });
     } else {
         response.writeHead(400, { 'Content-Type': 'text/plain'});
