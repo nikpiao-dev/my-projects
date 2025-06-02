@@ -1,4 +1,4 @@
-Here’s an example where we use PUT to fully update (overwrite) our username:
+// Here’s an example where we use PUT to fully update (overwrite) our username:
 
 const http = require('http');
 
@@ -28,13 +28,14 @@ const server = http.createServer((request, response) => {
 
 server.listen(3000, () => {
   console.log('Server running on http://localhost:3000');
+});
 
 
-Remember, we'll need to open a new terminal window and write a cURL command to replace the username:
+// Remember, we'll need to open a new terminal window and write a cURL command to replace the username:
 
-curl -X PUT http://localhost:3000 -d "frolic-fan"
+// curl -X PUT http://localhost:3000 -d "frolic-fan"
 
-In our console, we should see
+// In our console, we should see
 
-Original Username: lumon-is-life
-Updated Username: frolic-fan
+// Original Username: lumon-is-life
+// Updated Username: frolic-fan

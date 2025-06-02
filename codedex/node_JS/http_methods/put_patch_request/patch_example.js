@@ -1,4 +1,4 @@
-Let's revisit the username example, but with PATCH instead of PUT.
+// Let's revisit the username example, but with PATCH instead of PUT.
 
 const http = require('http');
 
@@ -34,11 +34,11 @@ server.listen(3000, () => {
 });
 
 
-Here's the cURL command:
+// Here's the cURL command:
 
-curl -X PATCH http://localhost:3000 -d "1234"
+// curl -X PATCH http://localhost:3000 -d "1234"
 
-And here's what we'd see in the console:
+// And here's what we'd see in the console:
 
-Original Username: @rihanna
-Updated Username: @badgalriri
+// Original Username: @rihanna
+// Updated Username: @badgalriri
