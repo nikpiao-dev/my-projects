@@ -1,0 +1,30 @@
+Joins
+# Introduction
+Welcome to the last chapter of the SQL course! You made it.
+
+So far in the course, we have only dealt with one table at a time. But in the real world, data isn’t stored in a single table.
+
+Imagine you are a Data Analyst at Spotify. There’s a table for artists, one for albums, one for songs, one for users, and one for playlists.
+
+Now someone on the team wants to know: Which users have added songs by Taylor Swift to their playlists?
+
+The answer lies in the connections across multiple tables. That’s where SQL joins come in.
+
+multiple tables
+
+A join lets us combine rows from two or more tables, based on a related column.
+
+There are several types of joins in SQL, each serving a different purpose:
+
+JOIN
+LEFT JOIN
+RIGHT JOIN
+FULL JOIN
+UNION
+classic venn diagram charts with four of them
+
+In this chapter, we will learn how to work with multiple tables by joining them!
+
+Let’s get started. 👯
+
+
