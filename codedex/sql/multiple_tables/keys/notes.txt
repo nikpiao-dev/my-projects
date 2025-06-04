@@ -1,0 +1,34 @@
+# Primary vs. Foreign Keys
+Before we jump into joining tables, we need to learn about primary keys and foreign keys: ways that multiple tables are connected to one another.
+
+A primary key is a column that uniquely identifies each row in a table. 🔑
+
+Think of it like a student ID number in a college database – no two students can have the same one.
+
+So suppose we have a users table in the database:
+
+id	username	level	rank	following	followers	signed_up
+1	@sonny	13	Gold	147	918	2022
+2	@jackieisonline	9	Silver	3	30	2023
+3	@lilybird	7	Silver	50	101	2022
+4	@intelagense	12	Gold	70	533	2022
+Here, the id column is the primary key. Each user (row) must have a unique id.
+
+A foreign key, on the other hand, is a column in one table that refers to the primary key in another table. Unlike a primary key, it can have duplicate values. 🗝️
+
+Suppose we have a second projects table:
+
+project_id	name	user	user_id	likes	comments	staff_picks
+1001	Karaoke Nite	@sonny	1	21	6	TRUE
+1002	Welp	@sonny	1	13	1	TRUE
+1003	7 minutes in heaven	@jackieisonline	2	15	3	TRUE
+1004	Chao Bing	@jackieisonline	2	13	4	TRUE
+1005	ifeelsomuchsha.me	@jackieisonline	2	19	6	TRUE
+1006	Wobble Digging Robot	@intelagense	4	15	6	TRUE
+Here, the user_id column in the projects table is a foreign key that refers to the id column in the users table. So that’s how the two tables are connected. 🤝
+
+
+
+Note: The projects table can also have its own primary key (maybe project_id). And it can have other foreign keys that link out to other primary keys in other tables (i.e. posts table, courses table).
+
+Now that we’re locked in 🔐, let’s do a thought experiment.
