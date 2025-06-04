@@ -1,0 +1,6 @@
+To delete the status message, you'll want to:
+
+Check if the request method is DELETE
+Set the status message to an empty string ('')
+Log the old status and a "status deleted" message to the console
+Send a response back to the user confirming it's been deleted
