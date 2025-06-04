@@ -43,7 +43,7 @@ my-project/
 - **`others/`**  
   Miscellaneous files and practice exercises that don't fit into the other categories. This might include experimental scripts, side projects, or learning notes.
 
--- **`sql/`**
+- **`sql/`**
     Contains exercises and notes from the SQL-focused course on Codédex. Topics include foundational database concepts, SQL query building, database management, and optimization techniques.
 
 ---
