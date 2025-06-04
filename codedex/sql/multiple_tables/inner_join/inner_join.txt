@@ -1,0 +1,66 @@
+# INNER JOIN
+It’s time to go over each of the joins! We will start off with the basic one: JOIN.
+
+JOIN, or sometimes known as the INNER JOIN, selects rows that have matching values in two tables.
+
+one venn diagram
+
+So instead of the usual:
+
+SELECT columns
+FROM table;
+
+We can join table1 with table2 with JOIN:
+
+SELECT columns
+FROM table1
+JOIN table2
+  ON table1.column1 = table2.column2;
+
+Or with INNER JOIN (the same thing):
+
+SELECT columns
+FROM table1
+INNER JOIN table2
+  ON table1.column1 = table2.column2;
+
+We are selecting some columns from table1.
+JOIN or INNER JOIN is how we are joining it with another table (table2).
+ON a specific connection (table1.column1 = table2.column2).
+One new thing here is the . dot operator. The table1.column1 just means table1’s column1.
+
+Note: Joins are typically done between a primary key and a foreign key. So table1.column1 is likely a foreign key that references table2.column2, which is likely a primary key. But technically... SQL doesn't require the columns you're joining on to be foreign keys or primary keys. As long as the values match up, you can join them!
+
+Suppose we have two tables. Here’s a directors table:
+
+id	name	country	style
+1	Quentin Tarantino	USA	Stylized violence, nonlinear, pop culture
+2	Wes Anderson	USA	Symmetrical, vintage colors, quirky, indie
+3	Greta Gerwig	USA	Coming-of-age, character-driven
+4	Hayao Miyazaki	Japan	Animation, fantasy, nature, hand-drawn
+5	Christopher Nolan	UK	High-concept, cerebral, epic
+6	Bong Joon Ho	South Korea	Social commentary, dark comedy
+7	Stanley Kubrick	USA	One-point perspective, long takes, details
+8	Wong Kar-wai	China	Neon, dream-like, handheld camera, love
+movies table:
+
+id	name	year	director	genre	imdb
+1	Pulp Fiction	1994	Quentin Tarantino	Crime, Drama	8.9
+2	The Royal Tenenbaums	2001	Wes Anderson	Comedy, Drama	7.6
+3	Fantastic Mr. Fox	2009	Wes Anderson	Animation, Comedy	7.9
+4	Barbie	2023	Greta Gerwig	Comedy, Fantasy	6.8
+5	Lady Bird	2017	Greta Gerwig	Comedy, Indie	7.4
+6	Spirited Away	2001	Hayao Miyazaki	Animation, Fantasy	8.6
+7	Howl’s Moving Castle	2004	Hayao Miyazaki	Animation, Fantasy	8.2
+8	Parasite	2019	Bong Joon Ho	Drama, Thriller	8.5
+9	Anora	2024	Sean Baker	Comedy, Drama	7.5
+If we want to join directors with movies:
+
+SELECT name, year, country
+FROM directors
+INNER JOIN movies
+  ON directors.name = movies.director;
+
+Here, we are joining the two tables on the directors.
+
+Note: Nothing technically happens to the two tables when we join them. We are just looking at the results to find insights; the database doesn’t actually change.
