@@ -33,3 +33,9 @@ Here are all the SQL comparison operators that we can use in a condition:
 We use them to compare two values in the WHERE clause.
 
 Let’s try them out.
+-- Combine conditions:
+AND, OR, NOT
+
+-- Examples:
+SELECT * FROM users WHERE age > 25 AND location = 'USA';
+SELECT * FROM orders WHERE NOT status = 'cancelled';
