@@ -1,0 +1,55 @@
+# DELETE Requests
+Let's do a roll call of the CRUD methods we've learned so far, using Instagram as an analogy!
+
+GET – See a list of people who liked your post 🩷
+POST – Publish a post to the grid 📰
+PUT – Replace the entire caption of your post ✍️
+PATCH – Fix a typo in your post 🔧
+There's just one more for this chapter: DELETE! A DELETE request is how you tell a server, “Hey, I don’t need this anymore. Please get rid of it!”
+
+DELETE – Remove your post 🗑️
+DELETE is used when you want to remove something that already exists — like a message, a comment, a post, or, to continue our example… a username. Let's take a look at a simple example of using a DELETE request to remove a username:
+
+const http = require('http');
+
+let username = 'coolCat123';
+
+const server = http.createServer((request, response) => {
+  if (request.method === 'DELETE') {
+    console.log('Original Username:', username);
+    username = null;
+    console.log('Username deleted.');
+
+    response.writeHead(200, { 'Content-Type': 'text/plain' });
+    response.end('Username deleted!');
+  } else {
+    response.writeHead(404, { 'Content-Type': 'text/plain' });
+    response.end('Go back to your terminal!');
+  }
+});
+
+server.listen(3000, () => {
+  console.log('Server is running at http://localhost:3000');
+});
+
+Let’s break it down!
+
+if (request.method === 'DELETE')
+
+checks if the incoming request is using the DELETE method. If it is, we move forward with removing something.
+
+In this case, we’re pretending to delete a user. We don’t actually need any data from the request body — we’re just setting our username variable to null, which means “there’s nothing here anymore.” So, we write username = null;.
+
+Then, we're console.log() before and after, just to show what changed in the terminal. You’ll see the original username and then confirmation that it’s been deleted.
+
+response.end('Username deleted!')
+
+sends a simple message back to whoever made the request, letting them know the delete was successful.
+
+That’s really all there is to it! In real apps, DELETE requests are often used to remove:
+
+Posts
+Comments
+Accounts
+Files
+In this basic version, we don’t use request.on('data') because we don’t need to receive any new info — we’re just saying goodbye to something that already exists. 👋
