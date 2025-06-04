@@ -6,6 +6,17 @@ This repository contains SQL practice files organized by topic and file type. It
 
 ## 📁 Folder Structure
 
+sql/
+├── multiple_tables/
+│   ├── inner_join/
+│   ├── joins/
+│   └── keys/
+└── queries/
+    ├── notes/
+    ├── sql_files/
+    ├── rotten_tomatoes.sql
+    └── where_notes.txt
+
 ### `multiple_tables/`
 
 - `inner_join/` — Practice with `INNER JOIN` queries  
