@@ -29,16 +29,26 @@ VALUES
 (3, '@lilybird', 7, 'Silver', 50, 101, '2022'),
 (4, '@intelagense', 12, 'Gold', 70, 533, '2022');
  
-1 @sonny 13 Gold 147 918 2022
-2 @jackieisonline 9 Silver 3 30 2023
-3 @lilybird 7 Silver 50 101 2022
-4 @intelagense 12 Gold 70 533 2022
+
+-- Insert multiple projects into the 'projects' table
+INSERT INTO projects (project_id, name, username, user_id, likes, comments, staff_picks)
+VALUES
+(1001, 'Karaoke Nite', '@sonny', 1, 21, 6, TRUE),
+(1002, 'Welp', '@sonny', 1, 13, 1, TRUE),
+(1003, '7 Minutes in Heaven', '@jackieisonline', 2, 15, 3, TRUE),
+(1004, 'Chao Bing', '@jackieisonline', 2, 13, 4, TRUE),
+(1005, 'ifeelsomuchsha.me', '@jackieisonline', 2, 19, 6, TRUE),
+(1006, 'Wobble Digging Robot', '@intelagense', 4, 15, 6, TRUE),
+(1007, 'Songbird Sketchbook', '@lilybird', 3, 25, 7, TRUE);
 
 
 
 
-INSERT INTO users (project_id, name, user,  user_id, likes, comments, staff_picks)
-VALUES ()
+-- Note: The projects table can also have its own primary key (maybe project_id). 
+-- And it can have other foreign keys that link out to other primary keys in other tables (i.e. posts table, courses table).
+
+
+--Instructions:
 
 
 -- pull up two tables:
