@@ -56,8 +56,28 @@ VALUES
 select * from books;
 select * from author;
 
+-- books (book_id, title, author_id, year, fictional, goodreads)
+-- author (id, name, born, books)
+
+
 
 -- Can you guess which columns are the primary keys 
+
+Primary Key:
+
+books.book_id -- (each book has a unique ID)
+
+author.id  -- (each author has a unique ID)
+
 -- and which one is the foreign key?
 
--- 
+Foreign Key:
+
+books.author_id → references author.id 
+-- Foreign Key (refers to the id column in the author table)
+
+
+-- Regular columns
+name, born, books
+
+
