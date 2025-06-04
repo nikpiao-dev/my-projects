@@ -1,4 +1,4 @@
-# SQL Practice Repository
+# SQL
 
 - This repository contains SQL practice files organized by topic and file type.
 - It's focused on learning how to write clean SQL queries, and understand relational databases.
