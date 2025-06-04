@@ -1,11 +1,13 @@
 # SQL Practice Repository
 
-This repository contains SQL practice files organized by topic and file type. It's focused on learning how to write clean SQL queries, understand relational databases, and prepare for exams or interviews.
+- This repository contains SQL practice files organized by topic and file type.
+- It's focused on learning how to write clean SQL queries, and understand relational databases.
 
 ---
 
 ## 📁 Folder Structure
 
+```text
 sql/
 ├── multiple_tables/
 │   ├── inner_join/
@@ -16,6 +18,7 @@ sql/
     ├── sql_files/
     ├── rotten_tomatoes.sql
     └── where_notes.txt
+```
 
 ### `multiple_tables/`
 
