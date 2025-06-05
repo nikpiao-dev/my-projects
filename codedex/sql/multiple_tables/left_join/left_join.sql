@@ -45,3 +45,22 @@ limit 5;
 
 
 -- Use left join to combine both tables
+select name, title, year
+from authors
+left join books
+  on books.author_id = authors.id;
+
+
+
+
+SELECT book_id, title, year
+FROM books
+LEFT JOIN authors
+  ON books.author_id = authors.id;
+
+-- This is the key difference between a LEFT JOIN and an INNER JOIN:
+
+    -- LEFT JOIN shows all rows from the left table (authors), even if there’s no match in the right table (books).
+
+    -- INNER JOIN would skip authors with no books.
+
