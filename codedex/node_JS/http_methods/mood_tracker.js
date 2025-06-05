@@ -20,22 +20,34 @@ let mood = '';
 
 const server = http.createServer((request, response) => {
 
-  if (request.method === 'Your_Method') {
+  if (request.method === 'POST') {
+    request.on('data', (tweet) => {
+      mood += tweet;
+    });
 
-      // Your code goes here! 😄
+    request.on('end', () => {
+      console.log('New mood:', mood)
 
-    } else if (request.method === 'Your_Method') {
+    // Send a simple response
+    response.writeHead(200, { 'Content-Type': 'text/plain' });
+    response.end('Tweet received!');
+    });
+  } else if (request.method === 'PATCH') {
 
         // Your code goes here! 🤩
-
-   } else {
-  	
-      // Your error code goes here! 🤕
-
-   }
+      
+      response.writeHead(200, { 'Content-Type': 'text/plain' });
+      response.end('Mood patched!');
+  } else {
+    response.writeHead(404, { 'Content-Type': 'text/plain' });
+    response.end('Go back to your terminal!');
+  }
 });
 
 server.listen(3000, () => {
   console.log('Mood feed server running at http://localhost:3000');
 });
 
+// cURL command:
+// curl -X PATCH http://localhost:3000 -d 'I love Node.js!'
+// curl -X POST http://localhost:3000 -d 'I love Javascript!'
