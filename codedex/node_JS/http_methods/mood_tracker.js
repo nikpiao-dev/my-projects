@@ -35,6 +35,16 @@ const server = http.createServer((request, response) => {
   } else if (request.method === 'PATCH') {
 
         // Your code goes here! 🤩
+    
+  if (request.method === 'PATCH') {
+    let addition = '';
+
+    request.on('data', (tweet) => {
+      addition += tweet;
+    });
+
+    
+  }
       
       response.writeHead(200, { 'Content-Type': 'text/plain' });
       response.end('Mood patched!');
