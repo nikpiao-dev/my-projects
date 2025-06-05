@@ -24,7 +24,6 @@ const server = http.createServer((request, response) => {
     request.on('data', (tweet) => {
       mood += tweet;
     });
-
     request.on('end', () => {
       console.log('New mood:', mood)
 
@@ -34,8 +33,6 @@ const server = http.createServer((request, response) => {
     });
   } else if (request.method === 'PATCH') {
 
-        // Your code goes here! 🤩
-    
   if (request.method === 'PATCH') {
     let addition = '';
 
@@ -43,16 +40,21 @@ const server = http.createServer((request, response) => {
       addition += tweet;
     });
 
-    
-  }
-      
+    request.on('end', () => {
+      console.log('Original mood:', mood);
+      mood = ' ' + addition; // Append new content to the end
+      console.log('New mood:', mood)
+       
       response.writeHead(200, { 'Content-Type': 'text/plain' });
       response.end('Mood patched!');
+    });
+  }
   } else {
     response.writeHead(404, { 'Content-Type': 'text/plain' });
     response.end('Go back to your terminal!');
   }
 });
+
 
 server.listen(3000, () => {
   console.log('Mood feed server running at http://localhost:3000');
