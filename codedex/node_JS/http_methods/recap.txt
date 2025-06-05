@@ -1,0 +1,22 @@
+Mood Tracker
+# Recap
+Woohoo! You made it to the end of the chapter!
+
+To recap, here's everything we've learned about CRUD:
+
+GET is how we read data from the server.
+See a list of people who liked your post 🩷
+POST is for sending data to the server.
+Publish a post to the grid 📰
+PUT fully replaces existing data with new data.
+Replace the entire caption of your post ✍️
+PATCH makes partial updates to data.
+Fix a typo on part of your post 🔧
+DELETE removes something from the server.
+Remove your post 🗑️
+cURL is the tool we use to send requests (like POST, PUT, PATCH, DELETE) to the server from the terminal.
+These HTTP methods are the building blocks for working with data in web applications.
+
+Whether you're getting, sending, changing, or deleting data, they help you communicate with servers and build interactive apps.
+
+Let's use what we learned to build a custom app!

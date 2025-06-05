@@ -1,0 +1,32 @@
+# UNION
+Now that we learned joins, there’s another simple way to combine tables: UNION.
+
+The UNION operator in SQL combines two tables into one list, without duplicates.
+
+SELECT columns
+FROM table1
+UNION
+SELECT columns
+FROM table2;
+
+Suppose we go back to the movies and directors database and we do:
+
+SELECT name
+FROM directors
+UNION
+SELECT name
+FROM movies;
+
+The results would be:
+
+name
+Quentin Tarantino
+Wes Anderson
+Greta Gerwig
+Hayao Miyazaki
+Christopher Nolan
+Bong Joon Ho
+Stanley Kubrick
+Wong Kar-wai
+Sean Baker
+Let's try this out.
