@@ -79,3 +79,18 @@ WHERE orders.item_id IS NULL;
 
 
 -- What days had the highest sales? And the lowest?
+
+select orders.date, count(*) as total_orders
+from orders
+group by orders.date
+order by total_orders desc;
+
+
+SELECT 
+  orders.date, 
+  products.name AS product_name,
+  COUNT(*) AS total_orders
+FROM orders
+JOIN products ON orders.item_id = products.id
+GROUP BY orders.date, products.name
+ORDER BY orders.date, total_orders DESC;
