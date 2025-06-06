@@ -32,3 +32,29 @@
 -- What are the best selling items? What are the most underperforming ones?
 -- What are all the orders the customers bought?
 -- What days had the highest sales? And the lowest?
+
+
+-- select both tables to check info
+select *
+from orders
+limit 5;
+
+select *
+from products
+limit 5;
+
+select * 
+from customers
+limit 5;
+
+
+-- Questions:
+
+
+-- What are the best selling items? What are the most underperforming ones?
+
+
+-- What are all the orders the customers bought?
+
+
+-- What days had the highest sales? And the lowest?
