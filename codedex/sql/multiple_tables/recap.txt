@@ -1,0 +1,15 @@
+// Codedex
+
+// Online Shop
+
+# Congrats!
+Hooray! You've made it to the end of the last chapter! 🎈
+
+Here’s a recap:
+
+Primary keys vs. foreign keys to connect two tables.
+JOIN / INNER JOIN to return rows that have matching values in two tables.
+LEFT JOIN / LEFT OUTER JOIN to return all rows from the left table and matched rows from the right table.
+UNION to combine the results of two queries into a single result… stacking rows like pancakes.
+classic venn diagram charts with four of them
+
