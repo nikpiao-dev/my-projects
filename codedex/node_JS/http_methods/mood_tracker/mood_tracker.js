@@ -58,5 +58,10 @@ server.listen(3000, () => {
 
 
 // cURL command:
+
 // curl -X PATCH http://localhost:3000 -d 'I love Node.js!'
+// curl -X PATCH http://localhost:3000 -d " and staying positive!"
+
 // curl -X POST http://localhost:3000 -d 'I love Javascript!'
+// curl -X POST http://localhost:3000 -d "Feeling good"
+
