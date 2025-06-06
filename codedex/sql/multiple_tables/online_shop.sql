@@ -14,6 +14,7 @@
 -- customer_id
 -- fulfilled
 -- item_id
+
 -- products has the following columns:
 
 -- id
@@ -21,6 +22,7 @@
 -- price
 -- active
 -- inventory
+
 -- customers has the following columns:
 
 -- id
@@ -51,7 +53,26 @@ limit 5;
 -- Questions:
 
 
--- What are the best selling items? What are the most underperforming ones?
+-- What are the best selling items? 
+
+SELECT products.name, COUNT(*) AS total_orders
+FROM orders
+JOIN products ON orders.item_id = products.id
+GROUP BY products.name
+ORDER BY total_orders DESC;
+
+
+-- What are the most underperforming ones?
+
+select products.name, products.price
+from products
+where products.id not in (select orders.item_id from orders);
+
+SELECT products.name, products.price
+FROM products
+LEFT JOIN orders ON products.id = orders.item_id
+WHERE orders.item_id IS NULL;
+
 
 
 -- What are all the orders the customers bought?
