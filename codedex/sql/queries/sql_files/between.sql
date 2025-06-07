@@ -28,3 +28,8 @@ BETWEEN 'A' AND 'D';
 The New Golden Age of Television is considered to have begun in 1999 with Jersey mobster show, “The Sopranos”.
 
 -- Find all shows released in the Golden Age, from 1999 to 2024. Have you seen any of those?
+
+SELECT id, name, year
+FROM shows
+WHERE year
+BETWEEN 1999 AND 2024;
