@@ -1,0 +1,70 @@
+Relational Databases
+In the world of databases, data is everything and organizing it is key.
+
+# Getting Started
+Imagine you're managing a huge collection of information — customer details, product inventory, employee records, and more. Overwhelming, right? Thankfully, database management systems (DBMS) make large amounts of data easier to work with.
+
+Among the various types of DBMSs, relational databases stand out for their simplicity, flexibility, and efficiency. A relational database organizes data into tables, with each table consisting of rows and columns, similar to a spreadsheet. These tables use keys to establish relationships between the rows and columns, and efficiently store and manipulate data.
+
+For example, below is a table of Brooklyn restaurants that could be a part of a relational database:
+
+id	name	cuisine	borough	neighborhood
+20	Peter Luger Steak House	Steak House	Brooklyn	Williamsburg
+21	The Commodore	American	Brooklyn	Williamsburg
+22	Paulie Gee's Slice Shop	Sandwiches	Brooklyn	Greenpoint
+24	Lilia Caffé	Italian	Brooklyn	Greenpoint
+25	Taqueria Ramirez	Mexican	Brooklyn	Greenpoint
+28	Lucy's	Vietnamese	Brooklyn	Bushwick
+To interact with relational databases, we use SQL (Structured Query Language). It provides a standardized method to perform various operations such as querying, updating, inserting, and deleting data.
+
+Let's begin our exploration into the world of relational databases and SQL.
+
+# Example
+Imagine we're setting up a database for our local library. Libraries have books, right? Each book has an author. But authors can write many books. Also, books belong to different genres like mystery, romance, or science fiction. Starting to feel complicated? It’s not, we can represent this using a relational database.
+
+We can start creating the database through tables. Let’s start:
+
+In the following books table, each row is associated with the following columns:
+
+book_id.
+title
+author_id
+genre
+publication_year
+book_id	title	author_id	genre	publication_year
+1	Dune	1	Sci-Fi	1965
+2	Little Women	2	Novel	1868
+3	1984	3	Dystopian	1949
+To track just the author info, we can use another table named authors. Each row gets a unique ID number, along with columns for the name and birth of the author:
+
+author_id	author_name	birth_year
+1	Frank Herbert	1920
+2	Louisa May Alcott	1832
+3	George Orwell	1903
+In this example:
+
+Each table uses a primary key to unique identify each row in the table.
+The books table uses a book_id while the authors table uses an AuthorID.
+The author_id establishes the relationship between the two tables.
+While the author_id is a primary key in authors, it is a foreign key in books.
+Keys are crucial in relational databases. With primary and foreign keys, we can establish relationships between tables and ensure data integrity. Through these relationships, we can easily retrieve information. For example, book_id 1 (for "Dune") has author_id 1, linking it to "Frank Herbert" in the authors table.
+
+# Conclusion
+This example shows how a relational database structure allows us to efficiently manage and query data. Primary keys uniquely identify rows within a table, and can be referenced in other tables with a foreign key. Together, they enable data consistency and retrieval. As you go on to tackle real-world data challenges, remember that relational databases are powerful tools for managing structured data.
+
+# Bonus: RDBMS
+A relational database management system (RDBMS) provides robust tools for managing relational databases, including:
+
+Creating, querying, and administering databases.
+Ensuring data integrity.
+Enabling efficient data retrieval and manipulation.
+RDBMSs cater to a wide range of use cases and industries, from small-scale projects to large enterprises, allowing developers and businesses to effectively manage their data.
+
+Here are three popular RDBMSs:
+
+MySQL: an open-sourced RDBMS known for ease of use and commonly used for websites.
+PostgreSQL: known for its reliability and support for complex queries.
+Microsoft SQL Server: offers enterprise-level features like business intelligence and integrates with other Microsoft products.
+If you're working with data in a mobile app or small-scale project, there's also SQLite, which does not require a separate server process. We'll learn about SQLite in another bonus article in this course.
+
+Each of these RDBMSs are suitable for different scenarios, so choosing the right one depends on factors such as project requirements, scalability needs, and budget considerations.
