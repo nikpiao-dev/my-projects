@@ -1,0 +1,36 @@
+# INSERT INTO
+When you create a new table, it’s empty. Now, time to add some rows to it!
+
+Use the INSERT statement to add a new row into a table:
+
+INSERT INTO companies (id, name, headquarters, year)
+VALUES (1, 'Twitter', 'San Francisco', 2006);
+
+Let’s break this down:
+
+INSERT INTO is a clause that adds the specified row.
+companies the name of the table the row is being added to.
+(id, name, headquarters, year) is a parameter with the column names that data will be inserted to.
+VALUES clause indicates the data being inserted.
+(1, 'Twitter', 'San Francisco', 2006) are the values.
+After using this statement, there'll be be a new row in companies where:
+
+id is 1
+name is 'Twitter'
+headquarters is 'San Francisco'
+year is 2006
+We can also add multiple rows like so:
+
+INSERT INTO companies (id, name, headquarters, year)
+VALUES (1, 'Twitter', 'San Francisco 🌁', 2006);
+
+INSERT INTO companies (id, name, headquarters, year)
+VALUES (2, 'Duolingo', 'Pittsburgh 🐝', 2011);
+
+INSERT INTO companies (id, name, headquarters, year)
+VALUES (3, 'BeReal', 'Paris 🇫🇷', 2020);
+
+INSERT INTO companies (id, name, headquarters, year)
+VALUES (4, 'Codedex', 'New York 🗽', 2022);
+
+Here, we added four rows into the companies table.

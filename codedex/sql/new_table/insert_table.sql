@@ -24,11 +24,17 @@ INSERT INTO companies (id, name, headquarters, year)
 VALUES (4, 'Codedex', 'New York 🗽', 2022);
 
 
+-- Find 2-3 tech companies that you like 
+-- and use INSERT statements to add their info (id, name, headquarters, founded year) into the companies table you created.
 
 
 
+INSERT INTO companies (id, name, headquarters, year)
+VALUES 
+(5, 'Google', 'Mountain View, USA', 1998),
+(6, 'Microsoft', 'Redmond, USA', 1975),
+(7, 'Amazon', 'Seattle, USA', 1994);
 
 
-
--- select all from companies table
+-- Try SELECT * after.
 select * from companies;
