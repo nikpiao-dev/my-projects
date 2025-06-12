@@ -1,0 +1,157 @@
+Setting Up SQLite Locally
+# Introduction
+So far in this course, we’ve been running all of our queries on Codédex. But what if we want to run SQL on our own computer? 🛢️
+
+Meet SQLite, a small but mighty SQL engine. It’s lightweight (hence the name “lite”), serverless, and stores a whole database in a single .sqlite or .db file. It’s also everywhere: powering mobile apps, web browsers (history, bookmarks, cookies), WhatsApp, desktop apps… you name it.
+
+Note: It’s perfect for small apps, side projects, and quick experiments, but it's not ideal for giant, scale-to-a-million-users type of apps.
+
+sqlite
+
+In this bonus article, we will learn how to install SQLite, create a database, add some data, and run some queries – all on your local computer!
+
+Let’s gooo.
+
+# Download & Install SQLite
+## 🪟 For Windows
+Head over to https://www.sqlite.org/download.html
+Find Precompiled Binaries for Windows
+Download sqlite-dll-win-x86-3500000.zip (the number could be different)
+Extract the ZIP file to a folder like C:\sqlite
+Open Command Prompt and run:
+cd C:\sqlite
+sqlite3
+
+You should see a prompt like sqlite>. That’s it! 👌
+
+## 🍎 For macOS
+Open Terminal and run:
+
+brew install sqlite
+
+(If you don’t have Homebrew, install it from brew.sh)
+
+And then test it with:
+
+sqlite3
+
+You should see a prompt like sqlite>. We’re golden. ✨
+
+screenshot
+
+# Create a New Database File
+Now that we have SQLite installed, let’s create a database for a pet store.
+
+sqlite3 petstore.db
+
+This should appear:
+
+SQLite version 3.43.2
+Enter ".help" for usage hints.
+sqlite>
+
+Congrats! We just created a brand new database called petstore.db! 🐶 🐹 🐱 🐰 🐵
+
+Suppose we just typed this, without specifying a database name:
+
+sqlite3
+
+Then SQLite creates a temporary in-memory database instead. This is great for testing, but the database disappears when you exit the session.
+
+# Quit SQLite
+To exit SQLite anytime, we can do either:
+
+Run .quit and hit enter
+Press ctrl + d
+# Create a Table
+Now that we have the database, we can create a table inside the SQLite prompt with something like:
+
+CREATE TABLE pets {
+  id INTEGER,
+  name TEXT,
+  species TEXT,
+  age INTEGER
+}
+
+Add some furry friends with:
+
+INSERT INTO pets (name, species, age) VALUES (1, 'Mochi', 'cat', 1); 
+INSERT INTO pets (name, species, age) VALUES (2, 'Prince Harry', 'cat', 1); 
+INSERT INTO pets (name, species, age) VALUES (3, 'Cloud', 'cat', 0);
+
+These are three queries, but we can type them out at the same time.
+
+To make sure it worked, we can use SELECT to return the table:
+
+SELECT * 
+FROM pets;
+
+And this should appear:
+
+1|Mochi|cat|1
+2|Prince Harry|cat|1
+3|Cloud|cat|0
+
+Now, we can use any of the queries and aggregate functions we learned, such as:
+
+SELECT * 
+FROM pets
+WHERE age >=1;
+
+Woohoo! We just created a database, added three rows, and returned some data from it. 🔥
+
+# Bonus: Format the Output
+Now you must be thinking, this output looks kinda wack. Can we make it look prettier?
+
+Before running our queries, if we run:
+
+.headers on
+.mode column
+
+And then type SELECT, our results will be nicely formatted in columns. Chef’s kiss. 🤌
+
+[screenshot]
+
+# Bonus: Import CSV Files into SQLite
+Let’s say we’ve got a CSV (Comma-Separated Values) file from your work, school, or a website like Kaggle, and we want to turn it into a table to analyze with SQL. We can totally do that, and it’s easier than you think!
+
+## Prep Your CSV
+Suppose the .csv file looks like:
+
+id,name,species,age 
+1,Femie,cat,7
+2,Maxie,cat,2
+3,Landon,dog,1
+
+Make sure to:
+
+Keep headers in the first row.
+Add commas to separate all the values (since it’s CSV).
+Save it in the same folder as the .db file. This is very important!
+## Create the Table
+Create the table again:
+
+CREATE TABLE pets ( 
+  id INTEGER, 
+  name TEXT, 
+  species TEXT, 
+  age INTEGER 
+);
+
+## Import the CSV
+First, tell SQLite to expect CSV format with .mode:
+
+.mode csv
+
+Then, import the file with .import command:
+
+.import pets.csv pets
+
+That’s it! The CSV data is now inside the pets table.
+
+# Wrap Up
+Boom, that’s it! We just ran SQL locally on your computer! 👏
+
+Remember, SQLite is just one of the numerous options you can use! There are many other tools you can choose from as you get deeper into Data Science or Web Development (i.e., PostgreSQL, MySQL, SQL Server).
+
+Happy querying!
