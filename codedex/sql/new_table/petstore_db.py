@@ -17,7 +17,8 @@ CREATE TABLE IF NOT EXISTS pets (
 ''')
 
 # Insert single pet
-cursor.execute("INSERT INTO pets (name, species, age) VALUES (?)", (1, "John", "cat", 4))
+cursor.execute("INSERT INTO pets (name, species, age) VALUES (?, ?, ?)", ("John", "cat", 4))
+
 
 # List of pets
 pets = [
