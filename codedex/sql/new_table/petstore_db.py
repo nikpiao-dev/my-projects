@@ -22,11 +22,12 @@ cursor.execute("INSERT INTO pets (name, species, age) VALUES (?, ?, ?)", ("John"
 
 # List of pets
 pets = [
-    (3, 'Mochi', 'cat', 1), 
-    (4, 'Prince Harry', 'cat', 1),
-    (5, 'Cloud', 'cat', 0),
-    (6, 'Max', 'cat', 2)
+    ('Mochi', 'cat', 1), 
+    ('Prince Harry', 'cat', 1),
+    ('Cloud', 'cat', 0),
+    ('Max', 'cat', 2)
 ]
+
 
 
 # Insert each pet into the table (w/o using "executemany")
