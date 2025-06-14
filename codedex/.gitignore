@@ -22,6 +22,4 @@ __pycache__/
 *.tmp
 *.swp
 
-# Ignore gen_ai directory in repo root
-gen_ai/
 
