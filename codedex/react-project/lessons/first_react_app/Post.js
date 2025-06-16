@@ -1,5 +1,3 @@
-
-
 import FollowButton from "./FollowButton.js";
 import LikeButton from "./LikeButton.js";
 
@@ -18,5 +16,4 @@ export default function Post() {
       <LikeButton />
     </div>
   );
-}
 
