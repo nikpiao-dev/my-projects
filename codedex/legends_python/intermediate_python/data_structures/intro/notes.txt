@@ -1,0 +1,34 @@
+Hi Bestie!
+# Intro
+Welcome back! Guess who’s back? Back again? It's Python! 🐍
+
+It's time to take things to another level with Python, it's finally time to add data structures to your toolkit.
+
+
+
+From creating whimsical Nyan Cat GIFs 🌈 to powering machine learning algorithms 🤖 , Python's extensive libraries and data structures make it a powerful language for data handling and data collection. Get ready to unleash your creativity!
+
+# Back to Basics
+Understanding data types is critical to organize and manipulate information in Python.
+
+Let's go over our fundamental data types:
+
+🔢 int: Whole numbers like 0, 1, -4, 200.
+🎈 float: Decimals numbers like 3.14, 0.0, 12.99.
+🧵 str: Sequences of characters, enclosed in quotes like "howdy!"
+✅ bool: Boolean representations of a True or False value.
+Data structures are containers that let us organize and store data effectively.
+
+Remember Python lists? Those were data structures! A list stores different types of items in order, simplifying data organization and manipulation.
+
+social_platforms = ['TikTok', 'Instagram', 'BeReal']
+
+In this chapter, we will focus on three new data structures:
+
+Tuples
+Dictionaries
+Sets
+Each data structure comes with their own strengths and choosing the "right" one can significantly improve your program. 💪
+
+
+
