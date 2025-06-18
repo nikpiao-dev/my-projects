@@ -1,0 +1,61 @@
+Most Streamed Songs
+# for...of
+ES6 also gave us a new way to do repetitive things. First is the for...of loop.
+
+This loop is great for iterating over each item in a sequence such as a string:
+
+const name = "dumbo";
+
+for (let letter of name) {
+  console.log(letter);
+}
+
+/* Output:
+d
+u
+m
+b
+o
+*/
+
+You can also do this for an array:
+
+const boroughs = ["brooklyn", "manhattan", "the bronx", "queens", "staten island"];
+
+for (let borough of boroughs) {
+  console.log(borough);
+}
+
+/*
+Output:
+brooklyn
+manhattan
+the bronx
+queens
+staten island
+*/
+
+# for...in
+Another fun loop to check out is the for...in.
+
+This is ideal for looping through objects. More specifically, you're looping through the object's keys:
+
+const person = {
+  name: "Austin",
+  age: 29,
+  occupation: "musician"
+}
+
+for (let info in person) {
+  console.log(person[info]);
+}
+
+/*
+Output:
+Austin
+29
+musician
+*/
+
+As you loop through each key in the person object, you access the paired value with [ ] bracket notation (i.e., person[info]).
+
