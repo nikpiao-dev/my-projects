@@ -1,0 +1,8 @@
+Over the years, how we write JS code has become more robust. Here's a refresher on the things we've learned:
+
+ES6 modernized a lot of how we write JS today.
+Arrow functions offer a concise way of writing functions, even on one line!
+We can use template literals to write single strings with placeholder variables.
+The for...of and for...in loops are good with arrays and objects, respectively.
+Spread operators simplify adding array items or object properties into new arrays or objects in JavaScript.
+Rest operators are placeholders for arrays that might have zero or more items.
