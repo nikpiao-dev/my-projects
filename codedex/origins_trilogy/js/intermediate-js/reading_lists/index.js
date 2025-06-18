@@ -58,3 +58,77 @@ Looking for Alaska by John Green
 
 
 """
+
+
+// Define object here 💖
+
+const goodreadsInfo = {
+  currentlyReading: [
+    {
+      title: "Digital Shadows: The Firewall Protocol",
+      author:  "Aria Kastrel",
+      genre: "Cyberpunk Thriller / Techno-thriller"
+    }
+  ],
+
+  wantToRead: [
+    {
+      title: "The Cipher Garden",
+      author: "Elion Varic",
+      genre: "Mystery / Sci-Fi"
+    },
+    {
+      title: "Static Whispers: Tales from the Signal Void",
+      author: "Mina Cross",
+      genre: "Sci-Fi Horror / Anthology"
+    }
+  ]
+}
+
+// Define addBooks() function here 💖
+
+const addNewBooks = (books, additionalBookObjects = []) => {
+  return [...books, ...additionalBookObjects];
+};
+
+goodreadsInfo.currentlyReading = addNewBooks(goodreadsInfo.currentlyReading, [
+  {
+    title: "Neon Helix",
+    author: "Jax Riven",
+    genre: "Cyberpunk / Biopunk"
+  }
+]);
+
+goodreadsInfo.wantToRead = addNewBooks(goodreadsInfo.wantToRead, [
+  {
+    title: "Silicon Requim",
+    author: "Nova Rennes",
+    genre: "Dystopian Tech Noir"
+  }
+]);
+
+
+// console.log(goodreadsInfo.currentlyReading);
+// console.log(goodreadsInfo.wantToRead);
+// console.log();
+
+// Define showGoodreadsInfo() function here 💖
+
+const showGoodreadsInfo = (info) => {
+  const currentlyReading = info.currentlyReading;
+  const wantToRead = info.wantToRead;
+
+  console.log("Currently Reading:")
+  for (let book of currentlyReading) {
+    console.log(`${book.title} by ${book.author} - ${book.genre}`);
+  }
+  console.log();
+
+  console.log("Want to Read:");
+  for (let book of wantToRead) {
+    console.log(`${book.title} by ${book.author} - ${book.genre}`)
+  }
+  console.log();
+}
+
+showGoodreadsInfo(goodreadsInfo);
