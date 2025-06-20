@@ -1,0 +1,47 @@
+Notifications
+# Parents and Children
+No matter how many components are in a React app, they all trace back to a single root.
+
+React apps are like upside down trees with a root element at the top:
+
+React App Component Tree
+
+Underneath, the root contains an <App> component, which also contains components. These components share a parent-child relationship.
+
+Parent components hold one or more child components In a React app, we can pass prop data down from parent to child component.
+
+# Component Props
+The components we make can also receive props that we name ourselves! Going back to the selfie example, we could pass an object of image data to a custom <Selfie> component:
+
+function App() {
+  const imageData = { src: "selfie.png", alt: "my selfie" }
+  return <Selfie image={imageData} />
+}
+
+In the <Selfie> component, we passed the imageData object to a named image prop.
+
+If the prop is a JavaScript variable, it is surrounded in curly braces.
+
+## Props Object
+So we've seen how props are implemented on the parent-side. But what do these props look like in the actual child component?
+
+Let's say we have an <App> component that passes some menu data to a child <CafeMenu> component:
+
+function App() {
+  const menuData = ["mac n' cheese", "caesar salad", "hot dog"];
+  return (
+    <CafeMenu menu={menuData} />
+  )
+}
+
+In the example above, we named a menu prop in the <CafeMenu> component.
+
+We can then access this prop via the props object in the component definition:
+
+function CafeMenu(props) {
+  console.log(props)
+  // (1) {menu: Array(3)}
+}
+
+This output tells us that the menu array was successfully passed into the props object and can be used in the <CafeMenu> component.
+
