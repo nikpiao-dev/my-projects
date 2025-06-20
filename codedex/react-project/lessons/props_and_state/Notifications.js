@@ -4,8 +4,8 @@ export default function Notification(props) {
   let classString = "";
 
   // Replace string below
-  if ("replace with isRead prop" == false) {
+  if (props.isRead == false) {
     classString = "not-read";
   }
-  return <div className={classString}>{/* message here 💖*/}</div>;
+  return <div className={classString}>{props.message}</div>;
 }
