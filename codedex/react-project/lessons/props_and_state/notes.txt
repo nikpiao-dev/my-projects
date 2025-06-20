@@ -45,3 +45,77 @@ function CafeMenu(props) {
 
 This output tells us that the menu array was successfully passed into the props object and can be used in the <CafeMenu> component.
 
+***************************************************************************************
+***************************************************************************************
+***************************************************************************************
+
+
+Stopwatch
+# State
+For React components, props are ideal if the data isn't expected to change after being set. But what if our component is using data that might change?
+
+A component's state is the data that can change over time.
+
+Some good examples of state, or data expected to change, include:
+
+Whether a restaurant is open or closed.
+A shopping cart with items added or removed from it.
+The inputs on a form.
+The number of likes in a post.
+As you go through this course, you'll find that state is incredibly important in React apps.
+
+# useState()
+But how do we create state in a function component? We use a special function for this called useState().
+
+The useState() function returns an array with just two values:
+
+The name for the state variable.
+A function that updates the state.
+Just like the base React class, we import the useState() function from the "react" package:
+
+import { useState } from "react";
+
+A special syntax is typically used to get the values returned from useState():
+
+function MyComponent() {
+  const [state, setState] = useState(value);
+}
+
+While not required, the returned function commonly starts with set followed by the name of the state it is paired with.
+
+An initial value is passed to useState() and it can be any data type in JavaScript (e.g., string, number, boolean) and even data structures like Arrays or objects.
+
+This function is known as a "hook" that gives function components a state. Prior to February 2019, only class components could use state. Because of hooks, function components have since become more widely used.
+
+Below is an example of a <TextMessage> component that stores a single message in a text state variable:
+
+import React, { useState } from "react";
+
+function TextMessage() {
+  // Define a state variable called "text" and a function to update it, "setText"
+  const [text, setText] = useState("Hello World!");
+
+  // This component simply displays the value of the state variable "text"
+  return (
+    <div>
+      <h1>Text: {text}</h1>
+      <p>This component does not use any events to update state.</p>
+    </div>
+  );
+};
+
+## Updating State
+We can't change state directly through reassignment:
+
+// This will not work
+text = "Catch ya next time! 👋";
+
+This is because direct updates to state may not always be reflected with an updated UI, resulting in inconsistent user experiences.
+
+In a React component, the special function used for updating its state can't just be called by itself. It has to be wrapped inside some kind of a process, like a control flow statement such as the following:
+
+if (text === "Hello World!") {
+  setText("Catch ya next time! 👋");
+}
+
+Anytime we use this special function from useState(), the component is re-rendered. In the following chapters, you will learn of other wonderful ways of using state besides with if statements.
