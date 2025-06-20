@@ -1,0 +1,34 @@
+On The Side
+# Sync vs. Async
+After you've ordered your food from a delivery app, what would you do?
+
+Follow your driver on the app until they get to you.
+Go do other stuff and wait for the app to notify you.
+Option 1 is synchronous because we're waiting until the food arrives before doing something else. Option 2, however, is asynchronous because you can go do other stuff while waiting for the food to be delivered. 😅
+
+By default, JavaScript code runs from top to bottom, one line at a time. Many operations in JavaScript, such as creating a variable and logging it to the console, happen really fast when running the code:
+
+// This goes first
+let favoriteGameConsole = "Xbox 🎮";
+
+// This goes next
+console.log(favoriteGameConsole);
+
+But some operations might take longer to complete, including:
+
+Setting timers. ⏰
+Listening for events on a website. ⌨️
+Fetching data from outside your code. 📦
+In this chapter, we will use asynchronous JavaScript for some tasks that might take a little more time.
+
+# Our Editor
+In the last chapter, we used a single index.js file with a Console window.
+
+For this chapter, we will use a 3-panel view for exploring and understanding asynchronous JavaScript. From left to right, we have:
+
+A panel with our narrative.
+Code editors for JavaScript, HTML, & CSS.
+An output window for a web page.
+There is a "Run" button in the bottom-right corner for running our code.
+
+Editor for Chapter 2 of course
