@@ -1,20 +1,14 @@
-"""
-
-Instructions
-Let's get started with making promises. 🤝
-
-In the random-numbers.js file, define a randomNumberPromise() function that returns a new Promise object. This object should include a callback function that either resolves or rejects the promise.
-
-Inside the callback function, create a random number between 1 and 10.
-
-If the number is less than 5, use resolve().
-Otherwise, use reject().
-
-"""
-
-// Define randomNumberPromise() function here 💖
-
-const generateBtn = document.getElementById("generateButton");
-
-generateBtn.addEventListener("click", randomNumberPromise);
-
+function randomNumberPromise() {
+  return new Promise((resolve, reject) => {
+    const randomNumber = Math.floor(Math.random() * 10) + 1; // Random number between 1 and 10
+    if (randomNumber < 5) {
+      resolve(); // Resolve if the random number is less than 5
+    } else {
+      reject("Rejected"); // Reject with the random number if 5 or greater
+    }
+  });
+ }
+ 
+ const generateBtn = document.getElementById("generateButton");
+ 
+ generateBtn.addEventListener("click", randomNumberPromise);
