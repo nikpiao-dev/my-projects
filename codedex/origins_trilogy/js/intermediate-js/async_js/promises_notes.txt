@@ -1,0 +1,32 @@
+ Random Numbers
+# Promises
+One of the coolest features from ES6 are promises. Huh?
+
+Promises are objects that represent asynchronous operations that are either successful or unsuccessful.
+
+They come in three states:
+
+A "pending" state for an unfinished operation (default).
+A "fulfilled" state for a successful operation.
+A "rejected" state for an unsuccessful operation.
+Examples of these operations include fetching data and handling errors.
+
+We can make promises with the built-in Promise class:
+
+function getSomeData() {
+  const error = true;
+
+  return new Promise((resolve, reject) => {
+    if (!error) {
+      resolve(); // The operation was successful
+    } else {
+      reject("An error happened along the way.");
+    }
+  });
+}
+
+console.log(getSomeData());
+
+Inside the parentheses for new Promise(), we pass a single callback function that takes two parameters. These parameters, resolve and reject, are also functions. If the promise is fulfilled, the resolve() function activates. Otherwise, the reject() function activates.
+
+Note: We aren't invoking the callback directly. Instead, the returned promise is invoking the callback for us.
