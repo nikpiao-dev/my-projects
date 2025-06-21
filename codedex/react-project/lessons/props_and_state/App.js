@@ -52,13 +52,17 @@
 
 // Stopwatch
 
+// import React from "react";
+// import Stopwatch from "./Stopwatch.js";
+
+// export default function App() {
+//   return <Stopwatch />;
+// }
+
+
 import React from "react";
-import Stopwatch from "./Stopwatch.js";
+// Import Quiz component here 💖
 
 export default function App() {
-  return (
-    <div>
-      <Stopwatch />
-    </div>
-  );
+  return <div>{/* Write code here 💖 */}</div>;
 }
