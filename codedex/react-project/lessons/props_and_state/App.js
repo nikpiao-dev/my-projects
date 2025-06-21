@@ -57,6 +57,8 @@ import Stopwatch from "./Stopwatch.js";
 
 export default function App() {
   return (
-    <div></div>
+    <div>
+      <Stopwatch />
+    </div>
   );
 }
