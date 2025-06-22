@@ -19,3 +19,16 @@ Remember: tomatoes are fruits! 🍅
 
 """
 
+
+
+my_fruits = {'Apple 🍎', 'Banana 🍌', 'Grape 🍇', 'Strawberry 🍓'}
+friend_fruits = {'Strawberry 🍓', 'Cherry 🍒', 'Blueberry 🫐', 'Banana 🍌'}
+
+union_fruits = my_fruits.union(friend_fruits)
+intersect_fruits = my_fruits.intersection(friend_fruits)
+diff_fruits = my_fruits.difference(friend_fruits)
+
+
+print('\nUsing union_set:', union_fruits)
+print('\nUsing intersection_set:', intersect_fruits)
+print('\nUsing difference_set:', diff_fruits)
