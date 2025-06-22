@@ -1,5 +1,6 @@
 """
-Instructions
+Instructions:
+
 🍎 Welcome to NYC! 🗽
 
 As one of the cultural capitals of the world, NYC is the home of the Met Museum.
@@ -16,5 +17,14 @@ artist
 period
 date
 Lastly, print the dictionary. What do you see? What if we just want to print the keys, or the values?
+
+
+Hint:
+# This dictionary represents a Terracotta Pyxis box
+pyxis = {
+  'artist': 'Penthesilea painter',
+  'period': 'classical',
+  'date': '465-460 BCE'
+}
 
 """
