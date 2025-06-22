@@ -28,3 +28,35 @@ pyxis = {
 }
 
 """
+
+# dictionary about hanging scroll (example):
+
+hanging_scroll = {
+  'title': "Spring Dawn over the Elixir Terrace",
+  'artist':"Lu Guang",
+  'period': "early Ming dynasty",
+  'date': "ca. 1369",
+  'culture': "China",
+  'medium': "Ink on paper",
+  'classification': "Paintings"
+}
+
+print('\nKeys:', hanging_scroll.keys())
+print()
+print('\nValues:', hanging_scroll.values())
+print()
+print('\nItems:', hanging_scroll.items())
+
+# Dictionary representing a Pyxis (with some extra info)
+pyxis = {
+  'artist': 'Penthesilea painter',
+  'period': 'classical',
+  'date': '465-460 BCE',
+  'culture': ['Greek', 'Attic'],
+  'medium': ['terracotta', 'white-ground'],
+  'dimensions': {'height': '4.75in', 'height w/cover': '6.75in'}
+}
+
+print('Printing the dictionary: ', pyxis)
+print('\nPrinting the keys: ', pyxis.keys())
+print('\nPrinting the values: ', pyxis.values())
