@@ -1,5 +1,8 @@
+// Cosmic Birthday 🎊
+// Codédex
 
-kconst apodContainer = document.getElementById("apod-container"); 
+// Declare `apodContainer` globally for both versions of the solution
+const apodContainer = document.getElementById("apod-container"); 
 
 /* 
 function fetchAPOD(date) {
