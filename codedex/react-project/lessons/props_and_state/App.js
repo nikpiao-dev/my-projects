@@ -62,9 +62,10 @@
 
 // Quiz
 
+
 import React from "react";
-// Import Quiz component here 💖
+import Quiz from "./Quiz.js"
 
 export default function App() {
-  return <div>{/* Write code here 💖 */}</div>;
+  return <Quiz />;
 }
