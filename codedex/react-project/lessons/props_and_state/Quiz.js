@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-// Import Question component here 💖
+import Question from "./Question.js";
 
 export default function Quiz() {
   const [questions, setQuestions] = useState([
@@ -9,8 +9,12 @@ export default function Quiz() {
 
   return (
     <div>
-      {/* Write code here 💖 */}
-      {/* Write code here 💖 */}
+      <Question
+        question={questions[0]}
+      />
+      <Question
+        question={questions[1]}
+      />
     </div>
   );
 }
