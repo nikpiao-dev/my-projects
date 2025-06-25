@@ -24,5 +24,27 @@ Mastermind by Taylor Swift
 Uptown Funk by Mark Ronson ft. Bruno Mars
 Ghost by Justin Bieber
 
-
 """
+
+
+liked_songs = {
+    'Blinding Lights': 'The Weeknd',
+    'Shivers': 'Ed Sheeran',
+    'Levitating': 'Dua Lipa',
+    'As It Was': 'Harry Styles',
+    'Good 4 U': 'Olivia Rodrigo'
+}
+
+def write_liked_songs_to_file(liked_songs, file_name):
+    with open(file_name, 'w') as file:
+        file.write('Liked Songs:\n')
+        for title, artist in liked_songs.items():
+            file.write(f'{title} by {artist}\n')
+    print(f'Liked songs has been added to {file_name}\n')
+
+write_liked_songs_to_file(liked_songs, 'liked_songs.txt')
+
+with open('liked_songs.txt', 'r') as file:
+    content = file.read()
+    print(content)
+
