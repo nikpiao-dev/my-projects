@@ -1,0 +1,47 @@
+08. Uncharted Files
+# File Operations
+Next, we're going to explore the world of file operations! 🚀
+
+There are various ways to navigate, modify, and manage files in Python.
+
+It's essential to understand the key file operations when handling files. 🔑
+
+Enter the try-finally statement:
+
+try:
+  file = open('example.txt', 'r')
+  # Perform operations on the file
+finally:
+  file.close()  # Ensures file close even if an exception occurs
+
+The try-finally statement is made up of two blocks:
+
+The try block with the code that we attempt to run.
+The finally block that always closes the file to finish the statement.
+Python also allows us to interact with files through operations by moving the file cursor and truncating files.
+
+file_path = 'example.txt'
+
+try:
+  file = open(file_path, 'r')
+  # Perform operations on the file
+finally:
+  file.close()
+# Reading from a file using read() method
+with open('example.txt', 'r') as file:
+  content = file.read()
+  print(content)
+
+# File Cursor
+The file cursor is necessary for reading or modifying specific parts of the file. Methods like .seek() move the cursor to a desired location within the file.
+
+# Moving the file cursor using seek()
+with open('example.txt', 'r') as file:
+  file.seek(10)  # Move to the 10th byte
+  content = file.read()
+
+The .truncate() method allows us to modify file size. This is useful when we want to remove or reset content beyond a certain point. We can trim or extend the file size as needed.
+
+# Truncating a file
+with open('example.txt', 'a') as file:
+  file.truncate(20)  # Limit the file size to 20 bytes
