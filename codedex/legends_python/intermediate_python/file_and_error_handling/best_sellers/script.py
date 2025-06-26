@@ -13,4 +13,27 @@ In the new file, use .writerow() to add new CSV data.
 Up next, let’s learn about what to do in the face of the unexpected, we'll be exploring error handling.
 
 
+# example csv
+
+import csv
+
+# Open the CSV file in 'read' mode
+with open('example.csv', 'r') as file:
+  # Create a CSV reader object
+  csv_reader = csv.reader(file)
+
+  for row in csv_reader:
+    print(row)
+
 """
+
+
+import csv
+
+# Open the CSV file in 'read' mode
+with open('Bestseller_Sheet.csv', 'r') as file:
+  # Create a CSV reader object
+  csv_reader = csv.reader(file)
+
+  for row in csv_reader:
+    print(row)
