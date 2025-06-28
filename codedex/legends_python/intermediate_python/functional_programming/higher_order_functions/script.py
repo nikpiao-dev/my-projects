@@ -26,3 +26,26 @@ print(translate_to_spanish('hello')) # Output: hola
 
 """
 
+
+def translator(lang):
+  translations = {
+  'spanish': {'hello': 'hola', 'goodbye': 'adiós', 'thank you': 'gracias'},
+  'french': {'hello': 'bonjour', 'goodbye': 'au revoir', 'thank you': 'merci'},
+  'italian': {'hello': 'ciao', 'goodbye': 'arrivederci', 'thank you': 'grazie'}
+}
+  def translate_word(word):
+    if word.lower() in translations[lang]:
+      return translations[lang][word.lower()]
+    else:
+      return f"Translation not available"
+
+  return translate_word # return inner function
+
+translate_to_spanish = translator('spanish')
+print(translate_to_spanish('hello')) # Output: hola
+
+translate_to_french = translator('french')
+print(translate_to_french('hello'))  # Output: bonjour
+
+translate_to_italian = translator('italian')
+print(translate_to_italian('good night')) # translation not available
