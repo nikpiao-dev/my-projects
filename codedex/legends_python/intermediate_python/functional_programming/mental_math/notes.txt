@@ -1,0 +1,39 @@
+Mental Math
+# List Comprehensions
+If loops make you dizzy, let me introduce the art of list comprehension. Imagine transforming complex loops into elegant one-liners, making your code more readable and efficient. 😎
+
+List comprehensions can transform data, filter elements, and even create nested lists. In functional programming, they let us transform list data concisely and expressively.
+
+# Syntax
+Here is how we write list comprehensions in Python:
+
+[expression for item in dataset if condition]
+
+Let's break down each piece, from left to right:
+
+The expression is applied to each item.
+A for..in statement loops through each item.
+An optional if condition can filter out items.
+The dataset can be something iterable like a list or tuple. List comprehensions do not change the original list.
+
+Note: A list comprehension works with for loops but not while loops.
+
+Let's see list comprehensions in action:
+
+# Original approach using a loop
+numbers = [1, 2, 3, 4, 5]
+squares = []
+for num in numbers:
+  squares.append(num ** 2)
+
+# Using a list comprehension to square each number
+squared_numbers = [num ** 2 for num in numbers]
+
+# Displaying the outcomes
+print('Original Numbers:', numbers)
+print('Squared Numbers:', squared_numbers)
+
+The expression num ** 2, calculates the square of each number.
+The item: num, represents each number in the numbers list.
+The data set: numbers is the original list of numbers.
+In this example, we used a list comprehension to create a new list containing the squares of each number in the original list. It's a concise and elegant way to achieve the same result as using a loop, but with less code.
