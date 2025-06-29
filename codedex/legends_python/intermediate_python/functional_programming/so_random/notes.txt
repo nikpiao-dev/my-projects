@@ -1,0 +1,13 @@
+15. So Random
+# Congrats!
+Welcome to the final exercise in our chapter on functional programming in Python! 🥳
+
+Let's recap what we learned:
+
+Pure functions return output with no side effects.
+Higher-order functions are used as arguments and/or return values.
+map(), filter(), and reduce() can efficiently manipulate data.
+List comprehensions can process existing list data in one line.
+With functional programming, we can write code that is easier to understand, test, and maintain. It encourages us to think about our code in terms of functions and data transformations, exciting stuff.
+
+Hope you're ready for a challenge!
