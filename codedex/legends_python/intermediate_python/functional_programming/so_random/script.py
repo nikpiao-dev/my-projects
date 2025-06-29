@@ -40,3 +40,49 @@ Go ahead and use display_name_info(). What names did you get?
 
 """
 
+
+import random
+from functools import reduce
+
+prefixes = ['Mystic', 'Golden', 'Dark', 'Shadow', 'Silver']
+suffixes = ['storm', 'song', 'fire', 'blade', 'whisper']
+
+def capitalize_suffix(name):
+  return name.upper()
+
+uppercase_suffixes = list(map(capitalize_suffix, suffixes))
+
+
+def create_fantasy_name(list_1, list_2):
+  return random.choice(list_1) + ' ' + random.choice(list_2)
+
+random_names = [
+  create_fantasy_name(prefixes, uppercase_suffixes)
+  for name in range(10)  
+]
+
+def concatenate_names(name1, name2):
+  return f"{name1} {name2}"
+
+def fire_in_name(name):
+  return 'FIRE' in name  
+
+filtered_names = list(filter(fire_in_name, random_names))
+
+if filtered_names:
+  reduced_names = reduce(concatenate_names, filtered_names)
+else:
+  reduced_names = "No names with 'FIRE'"
+
+
+def display_name_info(random_names, filter_names, concat_names):
+  print("Fantasy Names:")
+  for names in random_names:
+    print(names)
+  
+  print("Filtered names with 'Fire': ", filter_names)
+  print("Concatenated names: ", concat_names)
+
+
+display_name_info(random_names, filtered_names, reduced_names)
+
