@@ -1,0 +1,35 @@
+# Exploring Generators
+Generators are special functions that can pause and resume their execution, allowing you to generate a sequence of values dynamically. This makes them ideal for efficient iteration over large sequences of data without storing them in memory all at once.
+
+## Example
+Generator functions are defined with the def keyword like a regular function, but instead of using return statements, it uses yield statements to produce a series of values.
+
+Let’s start by defining a generator function with a descriptive name (square_generator()) that takes one or more parameters (limit in this case) to control its behavior.
+
+Inside the generator function, use a loop (or any other logic) to compute each value. Instead of using return, use yield to generate the current value of interest (num ** 2 in this case) back to the caller.
+
+Now, let's use the generator square_generator() to iterate over the squares of numbers up to a specified limit (5 in this example) and print each square.
+
+# Use the generator to iterate over squares
+for square in square_generator(5):
+  print(square)
+
+The for loop iterates over the values yielded by square_generator(5).
+
+For each iteration, the next square value (1, 4, 9, 16, 25...) is generated and printed within the loop. The final code should look something like this:
+
+# Define a generator function
+def square_generator(limit):
+  num = 1
+  while num <= limit:
+    yield num ** 2
+    num += 1
+
+# Use the generator to iterate over squares
+for square in square_generator(5):
+  print(square)
+
+# Conclusion
+Decorators enable you to modify function behavior dynamically, while generators provide a memory-efficient way to work with large datasets or sequences of data. By mastering decorators and generators, you'll have more control and flexibility in your Python programming.
+
+Start experimenting with decorators and generators in your own projects to see how they can make your code more manageable!

@@ -48,3 +48,10 @@ def say_hello():
 say_hello()
 
 
+# Conclusion
+Decorators enable you to modify function behavior dynamically, while generators provide a memory-efficient way to work with large datasets or sequences of data. By mastering decorators and generators, you'll have more control and flexibility in your Python programming.
+
+Start experimenting with decorators and generators in your own projects to see how they can make your code more manageable!
+
+twitter logo
+Codédex
