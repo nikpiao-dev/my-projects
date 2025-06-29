@@ -1,0 +1,50 @@
+Decorators & Generators
+Python's decorators and generators are powerful features that enhance code readability, maintainability, and performance. They empower developers to write efficient and maintainable programs. Decorators allow you to modify or extend the behavior of functions, while generators provide an efficient way to work with sequences of data.
+
+Let's explore these concepts with examples.
+
+# Understanding Decorators
+Decorators are functions that affect the behavior of other functions. They allow us to wrap a function with another function, adding functionality before or after the original function's execution without modifying their code directly.
+
+## Example
+Let’s explore a decorator example. First, we define a decorator:
+
+# Define the decorator function
+def my_decorator(func):
+  def wrapper():
+    print('Before function execution')
+    func()
+    print('After function execution')
+  return wrapper
+
+In this example, we define a my_decorator() function that then takes another function func() as its argument.
+Inside my_decorator(), we define an inner wrapper() function that adds behavior before and after calling the original function (func()).
+
+# Apply the decorator to a function
+@my_decorator
+def say_hello():
+    print('Hello, decorators!')
+
+# Call the decorated function
+say_hello()
+
+The @my_decorator syntax refers to the function we defined earlier. It is applied to the say_hello() function, which means that it acts as the wrapper() function.
+When say_hello() is called, it actually invokes wrapper, which in turn calls the original say_hello function and executes additional code before and after its execution. We use a decorator to enhance the behavior of the original function without modifying it directly.
+
+# Define a decorator function
+def my_decorator(func):
+  def wrapper():
+    print('Before function execution')
+    func()
+    print('After function execution')
+  return wrapper
+
+# Apply the decorator to a function
+@my_decorator
+def say_hello():
+  print('Hello, decorators!')
+
+# Call the decorated function
+say_hello()
+
+
