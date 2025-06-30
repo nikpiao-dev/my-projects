@@ -23,3 +23,24 @@ There's a code editor on the right side, created just for you. 👉
 Let's give it a try!
 
 
+# Comments
+Comments are very important in programming because they are used to document what our code does. They are also used to disable parts of the program.
+
+When the program is run, the comments are ignored.
+
+In Python, we can create a comment using the # hashtag symbol:
+
+# Printing out a message 
+print('Hi')
+
+On the first line, we created a comment. As a result, everything to the right of the hashtag # is ignored. The program continues to the next line, and the output is simply:
+
+Hi
+
+Python only ignores anything after the # on a line. So when a comment is placed towards the end of a line like this:
+
+print('Hi')   # I'm a comment, too!
+
+Here, the output will still be "Hi" because any code before the comment on the same line is still executed.
+
+
