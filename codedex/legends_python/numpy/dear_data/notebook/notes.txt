@@ -1,0 +1,28 @@
+01. The Notebook
+# What is NumPy?
+We live in a world full of data. It’s everywhere around us.
+
+In fact, 328 million terabytes of data are created every day. To put that into perspective, if a byte is an inch, that would be 207,890,118,441 times around Earth... a day.
+
+And within the bits & bytes, numbers & datasets, and tables & graphs, mysteries are waiting to be discovered and stories beckon to be told.
+
+Welcome to the first chapter of Data Analysis: NumPy! 🔢
+
+
+
+This is the beginning of our data science journey.
+
+NumPy (short for "Numerical Python") is a Python library that supports large, multi-dimensional arrays. It also comes with a bunch of math functions that you can use to operate on these arrays.
+
+It works well with other data science libraries such as Pandas (data analysis), Matplotlib (data visualization), and scikit-learn (machine learning), which makes NumPy the obvious first stop in the journey.
+
+In this chapter, we will learn about the basics of NumPy.
+
+# Notebook Documents
+Before we get started, note that we will use something called a notebook to write and execute our code in this course.
+
+A notebook is a file that contains a set of cells. Each cell can store and run code. Any output will be printed out right below the cell.
+
+There are many flavors of this, Jupyter Notebook and Google Colab are the two popular ones used by academic and industry data analysts.
+
+
