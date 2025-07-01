@@ -18,3 +18,10 @@ Create a bmi.py program that calculates your own BMI.
 Author's note: Psst. BMI is an archaic and oversimplified way to measure personal health. It was created by a mathematician – not a doctor! 💡
 
 """
+
+mass = 99.78
+height = 1.72
+
+bmi = 99.78 / 1.72 ** 2
+
+print(bmi)
