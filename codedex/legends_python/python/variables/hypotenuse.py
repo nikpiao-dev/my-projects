@@ -24,3 +24,11 @@ Create a hypotenuse.py program that asks the user for two numbers, a and b, and 
 Bonus: If you are looking for a harder challenge, try the Quadratic formula!
 
 """
+import math
+
+a = int(input("Enter a number: "))
+b = int(input("Enter a number: "))
+
+c = math.sqrt(a**2 + b**2)
+
+print(c)
