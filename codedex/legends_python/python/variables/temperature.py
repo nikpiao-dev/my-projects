@@ -16,3 +16,10 @@ Celsius=
 Print out the converted temperature. 🌡️
 
 """
+
+
+temp = 65
+
+Cel = (temp - 32) / 1.8
+
+print(Cel)
