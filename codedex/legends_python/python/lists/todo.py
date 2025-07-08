@@ -18,3 +18,21 @@ Try printing out the item at index 9 to see the IndexError before moving on.
 
 """
 
+
+todo = [
+    "🏦 Get quarters.",
+    "🧺 Do laundry.",
+    "🌳 Take a walk.",
+    "💈 Get a haircut.",
+    "🍵 Make some tea.",
+    "💻 Complete Lists chapter.",
+    "💖 Call mom.",
+    "📺 Watch My Hero Academia."
+]
+
+print("Todo list:", todo)
+print("First item:", todo[0])
+print("Index 2 to Index 4:", todo[2 : 5])
+print("Last item", todo[-1])
+print("Item at index 9:", todo[9]) # IndexError
+
