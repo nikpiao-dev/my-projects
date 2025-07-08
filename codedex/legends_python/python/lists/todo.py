@@ -32,6 +32,7 @@ todo = [
 
 print("Todo list:", todo)
 print("First item:", todo[0])
+print("Second item:", todo[1])
 print("Index 2 to Index 4:", todo[2 : 5])
 print("Last item", todo[-1])
 print("Item at index 9:", todo[9]) # IndexError
