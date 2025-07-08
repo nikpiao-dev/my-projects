@@ -1,0 +1,17 @@
+21. Fizz Buzz
+# Congrats!
+You've made it to the end of this chapter! Let's do a recap. 🥳
+
+The while loop iterates over and over again while the condition is true:
+
+while coffee < 1:
+  print('Tired')
+
+The for loop and the range() function to iterate for a certain number of times:
+
+for i in range(10):
+  print(i)
+
+Now let's take your learnings to the test!
+
+
