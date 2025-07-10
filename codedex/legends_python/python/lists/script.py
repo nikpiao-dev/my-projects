@@ -14,3 +14,9 @@ Which LEGO part are the elves running low on? Use min() to find out.
 Is there a LEGO part that the elves are overstocking? Use max() to find out.
 
 """
+
+
+lego_parts = [8980, 7323, 5343, 82700, 92232, 1203, 7319, 8903, 2328, 1279, 679, 589]
+
+print("Lego parts running low:", min(lego_parts))
+print("Lego parts overstacking:", max(lego_parts))
