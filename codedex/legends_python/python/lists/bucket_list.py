@@ -27,3 +27,22 @@ things_to_do = [
 Now, iterate over the list and print everything out.
 
 """
+
+
+
+things_to_do = [
+  '📚 Read 100 books across different genres.',
+  '🎮 Build a video game from scratch.',
+  '✈️ Travel to all 7 continents.',
+  '🧘‍♂️ Complete a 30-day silent meditation retreat.',
+  '🎥 Direct a short film.',
+  '🏊 Learn how to free dive.',
+  '🧑‍🍳 Master the art of French cooking.',
+  '📸 Start a photo journal documenting everyday life.',
+  '🛠️ Restore a vintage car.',
+  '🌌 Watch the Northern Lights in Iceland.'
+]
+
+
+for task in things_to_do:
+  print(task)
