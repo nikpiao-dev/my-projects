@@ -22,3 +22,25 @@ Print the distance in miles.
 After, call the function and use 10000 as the argument.
 
 """
+
+
+# def distance_to_miles(distance):
+  # miles = distance / 1.609
+  # print(miles)
+
+# distance_to_miles(1000)
+
+
+# def distance_to_miles(distance):
+  # return distance / 1.609
+# answer = distance_to_miles(1000)
+# print(answer)
+# distance_to_miles(1000)
+
+def distance_to_miles(distance):
+  miles = distance / 1.609
+  return miles
+
+print(distance_to_miles(1000))
+
+
