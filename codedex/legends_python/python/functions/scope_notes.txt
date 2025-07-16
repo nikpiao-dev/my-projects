@@ -1,0 +1,41 @@
+32. Stonks
+# Scope
+Suppose we created a variable inside the body of a function. Can we use it outside of the function? Well, let's see.
+
+Define a function named add() and print the variable answer outside of it:
+
+def add(x, y):
+  answer = x + y
+  return answer
+
+print(answer)
+
+When we run this code, we will get an error:
+
+NameError: name 'answer' is not defined
+
+This is due to something called scope.
+
+Scope determines where in the program a variable is visible and can be used.
+
+Here are two types of scope:
+
+The scope of the answer variable is only inside the add() function. It is a local variable that belongs to the local scope of the add() function.
+Now, a variable created outside of a function is called a global variable and belongs to the global scope, meaning that they can be used by every function.
+Let's try setting the answer variable as a global variable (outside the function):
+
+answer = 0
+
+def add(x, y):
+  answer = x + y
+  return answer
+
+add(3, 4)
+
+print(answer)
+
+The output won't be an error anymore!
+
+0
+
+Notice that answer is not 7. It's still 0 because if we create a variable with the same name inside a function, it will be a local variable and can only be used inside the function. The global variable with the same name will remain global and with the original value
