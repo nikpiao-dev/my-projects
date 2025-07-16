@@ -18,3 +18,29 @@ The parameters of the days will be in the range of 1 to 20 (since that is the pe
 Make sure to call each function to test if your functions work correctly!
 
 """
+
+
+stock_prices = [34.68, 36.09, 34.94, 33.97, 34.68, 35.82, 43.41, 44.29, 44.65, 53.56, 49.85, 48.71, 48.71, 49.94, 48.53, 47.03, 46.59, 48.62, 44.21, 47.21]
+
+
+def prices_at(x):
+  return stock_prices[x-1]
+
+def max_price(a,b):
+  # return max(stock_prices[a - 1: b])
+  mx = 0
+  for i in range(a, b + 1):
+    mx = max(mx, prices_at(i))
+  return mx
+
+def min_price(a, b):
+  min_num = prices_at(a)
+  for i in range(a, b + 1):
+    min_num = min(min_num, prices_at(i))
+  return min_num
+
+
+
+print(max_price(1, 15))
+print(min_price(5, 10))
+print(prices_at(3))
