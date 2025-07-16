@@ -21,3 +21,39 @@ Create a welcome menu and put that in a welcome() function.
 Create a main program that takes in user input with input().
 
 """
+
+
+
+def get_item(num):
+    if num == 1:
+        return '🍔 Cheeseburger'
+    elif num == 2:
+        return '🍟 Fries'
+    elif num == 3:
+        return '🥤 Soda'
+    elif num == 4:
+        return '🍦 Ice Cream'
+    elif num == 5:
+        return '🍪 Cookie'
+    else:
+        return 'Invalid item number'
+
+
+def welcome():
+    menu = """
+    McValue Menu:
+
+    1. 🍔 Cheeseburger
+    2. 🍟 Fries
+    3. 🥤 Soda
+    4. 🍦 Ice Cream
+    5. 🍪 Cookie
+    """
+    print("Welcome to McDonald's! We're happy to serve you. 🍟🍔")
+    return menu
+
+print(welcome())
+choice = int(input("What would you like to order?: "))
+
+print(get_item(choice))
+
