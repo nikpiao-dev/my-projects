@@ -1,0 +1,17 @@
+33. Drive-Thru
+# Congrats!
+Congratulations! You now know how functions work. This is a concept that trips up a lot of people, so definitely practice and practice. 💪
+
+In this chapter, we learned:
+
+The "Don't Repeat Yourself" methodology.
+We've been using built-in functions like print() and input() all along.
+How to define and call a function — the two-step process.
+Inputs with parameters and arguments.
+Outputs with the return keyword.
+Function scope vs. global scope.
+Here's the function skeleton one more time, just in case you forget!
+
+def function_name(parameter1, parameter2):
+  # The code inside
+  return value
