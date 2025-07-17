@@ -13,3 +13,12 @@ Create a Restaurant class in a restaurants.py file with the following attributes
 Make these empty/default values for now.
 
 """
+
+
+
+
+class Restaurant:
+  name = ''
+  category = ''
+  rating = 0.0
+  delivery = True
