@@ -29,7 +29,7 @@ pasta_palace = Restaurant()
 bobs_burgers.name = "Bob's Burgers"
 bobs_burgers.category = "American Diner"
 bobs_burgers.rating = 4.7
-bobs_burgers.deliivery = False
+bobs_burgers.delivery = False
 
 # second instance
 sunny_sushi.name = "Sunny Sushi"
