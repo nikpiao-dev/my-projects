@@ -52,3 +52,28 @@ My next birthday is 42 days away!
 Bonus: Instead of using a date in the future, what if we tried to see how many days it's been since a past event, like the release date of your favorite movie or game, or the date you were born? What about how many years or months it's been?
 
 """
+
+
+import random as rd
+import datetime as dt
+
+bday_messages = [
+    'Hope you have a very Happy Birthday! 🎈',
+    "It's your special day – get out there and celebrate! 🎉",
+    'You were born and the world got better – everybody wins! 🥳',
+    'Have lots of fun on your special day! 🎂',
+    'Another year of you going around the sun! 🌞'
+]
+
+random_message = rd.choice(bday_messages)
+print(random_message)
+
+today = dt.date.today()
+next_bday = dt.date(2026, 4, 30)
+
+days_away = (next_bday - today).days
+
+if today == next_bday:
+    print(random_message)
+else:
+    print(f"My next birthday is {days_away} days away!")
