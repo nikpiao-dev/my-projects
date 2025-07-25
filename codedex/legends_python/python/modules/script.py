@@ -24,3 +24,10 @@ Try running this program in the terminal with:
 python3 wiki.py
 
 """
+
+
+
+import wikipedia
+
+wikipedia.summary()
+print(wikipedia.search('Philosophy of life'))
