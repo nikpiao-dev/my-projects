@@ -1,0 +1,33 @@
+01. Setting Up
+# What is JavaScript?
+Welcome to The Origins III: JavaScript! Things are about to get fun. ✨
+
+The programming language we're learning is called JavaScript and it powers 97.5% of websites today.
+
+HTML Logo
+
+HTML
++
+Html Logo
+
+CSS
++
+Html Logo
+
+JavaScript
+=
+core languages of the web.
+
+HTML and CSS give a website structure and styling, but JavaScript makes it interactive and come alive. It lets us add basic functionality and dynamic behaviors to our web pages.
+
+But how did it come to be?
+
+
+
+The 90s was the dawn of the dot-com era, and an internet browser war was brewing between Netscape and Microsoft. In 1995, a Netscape developer created a buggy new scripting language... in just 10 days. 😵‍💫
+
+Take this clickable button, for example:
+
+Every time you click the button, the date and time get updated! This is but a small demo of what JavaScript can do.
+
+Without further ado, let's write a line of JavaScript code
