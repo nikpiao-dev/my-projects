@@ -1,0 +1,43 @@
+02. The Console
+# The Web Console
+Hold up, what the heck is a web console?
+
+A web console is a feature in your browser that can run JavaScript code.
+
+It's usually located in the browser's Developer Tools:
+
+Google Chrome logo
+Google Chrome: Click View > Developer > JavaScript Console.
+
+Safari logo
+Safari: Click Develop > Show JavaScript Console.
+
+Mozilla Firefox logo
+Mozilla Firefox: Click Tools > Browser Tools > Web Developer Tools.
+
+It should look something like:
+
+Console window for JavaScript
+
+For now, we're going to use the editor and Console window that we created just for your learning experience. 👉🏼
+
+# Console Log
+In JavaScript, the console.log() method tells the web console to output a message. We are going to use this a lot.
+
+The message we want to display should be inside parentheses ( ) and surrounded by quotes. They can be double quotes " or single quotes ', but the opening and closing quote marks have to match.
+
+This is an example of a console.log() method:
+
+console.log("👋 Howdy!");
+console.log('👋 Howdy!');
+
+In the code above, we instructed our program to print, or log, a message. The message can either be in double or single quotes.
+
+The resulting text that is displayed is referred to as the output.
+
+The output of the message would be:
+
+👋 Howdy!
+👋 Howdy!
+
+Note: It's optional to include a ; semicolon at the end of a line in JavaScript.
