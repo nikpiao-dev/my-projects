@@ -1,0 +1,15 @@
+43. Zen of Python
+# Congrats!
+Wow. You've reached the end of the last chapter in The Legend of Python! 🥺
+
+3 Characters Dancing
+
+In this chapter, we learned about:
+
+Linking modules with the import keyword.
+Some built-in modules from the Python standard library.
+Importing specific tools from modules with the from and as keywords.
+Packages and installing them with pip.
+These last few chapters have really tested your Python programming abilities. You made it through them all and you should be super proud of yourself!
+
+And we have a gift for you!
