@@ -1,0 +1,13 @@
+05. Receipt
+# Congrats!
+We've made it to the end of the first chapter! 🎈
+
+console.log("Congrats! You've made it.");
+
+To recap what we've learned:
+
+The console.log() method outputs messages to the Console window.
+JavaScript code runs one line at a time, from top to bottom.
+Single line comments are created using the // forward slashes.
+Multi-line comments are started by /* and closed with */.
+It's time to use what we've learned to build something fun!
