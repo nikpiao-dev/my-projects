@@ -1,0 +1,29 @@
+04. Secret Recipe
+# Comments
+In programming, comments are used to document what our code does, for ourselves and other developers. They can also disable parts of the program. When the program is run, the comments are ignored.
+
+In JavaScript, there are single line comments and multi-line comments.
+
+## Single Line Comments
+We can create a single line comment using // two forward slashes:
+
+// console.log("Nada");
+
+console.log("Hi"); // I'm a comment, too!
+
+On each line, anything to the right of the // forward slashes is ignored when the code is run.
+
+The first line is a comment with code that gets ignored.
+The second line begins with runnable code, and ends with a comment.
+The first console.log() is commented out while the other one is not. Therefore, the output would only be "Hi".
+
+## Multi-line Comments
+We can create a multi-line comment using /* to start the comment and */ to end it:
+
+/* This is commented out.
+console.log("Nada.")
+Yep! This is, too.
+console.log("Not displayed, either.")
+*/
+
+Here, everything inside the /* and */ are commented out. So a multi-line comment can technically be as long as you want!
