@@ -19,3 +19,21 @@ Celsius=
 Print out the converted temperature using console.log().
 
 """
+
+
+
+/* 
+
+Fahrenheit (°F) to Celsius (°C) Formula:
+  -> Celcius = (F - 32) / 1.8
+
+*/
+
+
+let temp = 68; // in Fahrenheit
+
+let celcius = (temp - 32) / 1.8
+
+console.log("Temperature in Fahrennheit: ", temp);
+console.log("Temperature in celcius: ", celcius);
+
