@@ -1,0 +1,12 @@
+10. Planet Weight
+# Congrats!
+Woohoo! You learned variables in JavaScript! 🙌
+
+Here's a recap of everything we learned in this chapter:
+
+let and const keywords.
+Data types: Numbers, Strings, Boolean, Null, and Undefined.
+Arithmetic operators: +, -, *, /.
+% modulo operator finds the remainder of division between two numbers.
+** exponent operator raises one number to the power of another number.
+Let's put it all together one more time!
