@@ -20,3 +20,13 @@ Your weight on Earth is 210 pounds.
 Your weight on Mars is 79.8 pounds.
 
 """
+
+
+
+let earth_w = 230;
+
+let mars_w = earth_w * 0.38;
+
+
+console.log("Your weight on Earth is", earth_w, "pounds.");
+console.log("Your weight on Earth is", mars_w, "pounds.");
