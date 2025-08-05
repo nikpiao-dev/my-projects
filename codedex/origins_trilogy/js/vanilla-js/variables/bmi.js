@@ -18,3 +18,16 @@ Create a program that calculates your own BMI.
 Author's note: Psst. BMI is an archaic and oversimplified way to measure personal health. It was created by a mathematician — not a doctor! 💡
 
 """
+
+
+
+// bmi = mass / height**2
+
+// I will be using metric system:
+
+let mass = 104.33; // in kg
+let height = 172.72 / 100 // in m
+
+const bmi = mass / height ** 2;
+
+console.log(bmi);
