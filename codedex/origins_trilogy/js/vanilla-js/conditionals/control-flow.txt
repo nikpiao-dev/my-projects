@@ -1,0 +1,15 @@
+11. Coin Flip
+# Control Flow
+Every JavaScript program we've worked with thus far executes one line at a time, from top to bottom. Each time we run the program, the same result is logged to the Console window.
+
+But what if we want our program to do different things based on different conditions?
+
+This can be done with control flow statements!
+
+It's as if you are going down a road and there's a fork ahead with a sign that reads “Albuquerque: left. Phoenix: right.”
+
+fork in the road
+
+In the “Conditionals” chapter, we will explore how programs “make decisions” by evaluating different conditions and introduce logic into our code!
+
+
