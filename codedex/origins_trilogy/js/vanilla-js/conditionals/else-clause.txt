@@ -1,0 +1,34 @@
+13. Good Afternoon
+# else Clause
+An else clause can be optionally added to the end of an if statement.
+
+if (condition) {
+  // Do something
+} else {
+  // Do something else 
+}
+
+If the condition is true, execute the code inside the if.
+Else the condition is false, execute the code inside the else.
+Here's an if/else statement in action:
+
+if (grade > 60) {
+  console.log("You passed.");
+} else {
+  console.log("You failed.");
+}
+
+If grade > 60 is true, then the program prints “You passed.”
+Else, the program prints “You failed.”
+# Comparison Operators
+Usually, we are comparing two values in a condition. To do so, we use comparison operators:
+
+=== strict equal
+!== strict not equal
+> greater than
+>= greater than or equal
+< less than
+<= less than or equal
+We've used < and > already, these are just more kinds of comparisons that we can make.
+
+
