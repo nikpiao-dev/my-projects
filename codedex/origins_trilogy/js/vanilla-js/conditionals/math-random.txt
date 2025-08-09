@@ -1,0 +1,31 @@
+15. Magic 8 Ball
+# Math.random()
+Remember the Coin Flip program in the beginning of the chapter? Let's learn how we can use a random number generator to add some more fun to our program.
+
+In JavaScript, the Math.random() method returns a random decimal number between 0 and 1.
+
+Suppose we print out three of them, like so:
+
+console.log(Math.random());
+console.log(Math.random());
+console.log(Math.random());
+
+The output would have three different numbers and that look something like:
+
+0.0236966238022709
+0.7397680104909345
+0.4103022944399179
+
+We will learn more about what a method and what Math.random() means in a later chapter.
+
+To get a random integer between 0 to 9:
+
+Math.floor(Math.random() * 10);
+
+This is multiplying the decimal number by 10 and then rounding it down to the nearest integer with Math.floor().
+
+So the above three numbers would look like:
+
+0
+7
+4
