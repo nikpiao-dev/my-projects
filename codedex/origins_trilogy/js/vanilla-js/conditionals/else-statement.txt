@@ -1,0 +1,35 @@
+14. pH Levels
+# else if
+Now you might be wondering, if/else just gives us two options, but how do we have more than two?
+
+You can add an else if section between the if and else in your control flow! This gives your program more conditions to evaluate, besides just two.
+
+if (conditionA) {
+  // Do this
+} else if (conditionB) {
+  // Do this, instead
+} else {
+  // Do this if none of the above are true
+}
+
+You don't have to add just one else if; you can include as many as you want!
+
+For example, we could apply this to a school grading system:
+
+let grade = 93;
+
+if (grade > 90) {
+  console.log("A");
+} else if (grade > 80) {
+  console.log("B");
+} else if (grade > 70) {
+  console.log("C");
+} else if (grade > 60) {
+  console.log("D");
+} else {
+  console.log("F");
+}
+
+Like the if statement, the code in an else if statement runs if its condition is true and the code in the rest of the if/else if/else statement is skipped.
+
+Here, because the grade is 93, the output would be "A".
