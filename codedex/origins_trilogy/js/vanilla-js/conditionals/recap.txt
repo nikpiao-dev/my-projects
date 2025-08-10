@@ -1,0 +1,25 @@
+17. Rock Paper Scissors
+# Congrats!
+console.log("Congrats! You've made it. 🎉")
+
+Here's a recap of everything we learned so far:
+
+Conditionals control the order in which the program's code executes.
+if statement checks a condition for truth and executes the code if it is.
+else executes the code if none of the above is True.
+One or more else ifs can be added between if and else.
+Comparison operators compare two values: ===, !==, >, >=, <, <=.
+Logical operators combine two or more conditions: &&, ||, !.
+Here's an if/else if/else statement in action just in case:
+
+if (review > 4.5) {
+  console.log("Extraordinary");
+} else if (review >= 4) {
+  console.log("Excellent");
+} else if (review >= 3) {
+  console.log("Good");
+} else {
+  console.log("Eh");
+}
+
+It's time to use what we've learned to build something awesome!
