@@ -1,0 +1,60 @@
+Bonus Article
+Nested If Statements
+# Syntax
+Sometimes, asking "what if?" can lead to more "what if"s. In JavaScript, and programming in general, this is no different.
+
+Conditional statements use the if and else keywords to tell the computer the steps to take in a program based on certain conditions.
+
+if (time > 10) {
+  console.log("Let's start coding! 🧑‍💻");
+} else {
+  console.log("Make sure to get good sleep 😴");
+}
+
+However, you can also nest your if statements!
+
+A nested if statement is an if statement inside another if statement:
+
+if (time > 10) {
+  if (coffee == true) {
+    console.log("Let's start coding! 🧑‍💻");
+  } else {
+    console.log("Time to brew some fresh coffee. ☕️!");
+  }
+} else {
+   console.log("Make sure to get good sleep! 😴");
+}
+
+The logic works like this:
+
+nested if statements
+
+Any code inside of an if statement that evaluates to true will run, including more conditional statements!
+
+# Example
+The following example illustrates how nested if statements can affect the output of a program:
+
+let weather = "Sunny";
+let temperature = 85;
+
+if (weather == "Sunny") {
+  if (temperature > 80) {
+    console.log("Yay, let's go to the beach! 🏖️");
+  } else {
+    console.log("Let's do something fun outdoors! ⛰️");
+  }
+} else {
+  console.log("Let's watch some shows on the couch! 🍿");
+}
+
+This will output the following to the console:
+
+Yay, let's go to the beach! 🏖️
+
+If the temperature is 75 degrees, the output would be:
+
+Let's do something fun outdoors! ⛰️
+
+But if the the weather isn't "Sunny":
+
+Let's watch some shows on the couch! 🍿
