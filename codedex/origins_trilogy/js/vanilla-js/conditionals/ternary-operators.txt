@@ -1,0 +1,44 @@
+Bonus Article
+Ternary Operators
+# Getting Started
+When writing a simple conditional statement in JavaScript, it usually features the if and else keywords:
+
+if (condition) {
+  // Run if true
+} else {
+  // Run if false
+}
+
+However, this would be a great opportunity to use a ternary operator!
+
+A ternary operator is used as a shorthand for an if/else statement. Instead of writing an if/else statement across multiple lines, you can do the same thing on a single line!
+
+condition ? ifTrue : ifFalse;
+
+The ternary operator uses a ? question mark operator that evaluates a condition on its left side and either runs the code represented by ifTrue (on one side of the : colon) or runs code in the ifFalse section (on the other side).
+
+It's amazing to think that all of this is going on in a single statement on one line!
+
+The value of of ifTrue and ifFalse can be either of the following:
+
+Raw data, like numbers, strings, etc.
+A defined variable with a value.
+A function that returns a value, like console.log().
+Note: The resulting value of a ternary operation can be saved to a variable!
+
+# Bonus: Coin Flip Revisited 🪙
+Let's revisit the code from the Coin Flip exercise:
+
+let num = Math.random();
+
+if (num > 0.5) {
+  console.log("Heads");
+} else {
+  console.log("Tails");
+}
+
+How would we work the if/else statement above into a single line with the ternary operator?
+
+# More Resources
+Solution to Coin Flip Revisited
+Ternary operators (MDN docs)
