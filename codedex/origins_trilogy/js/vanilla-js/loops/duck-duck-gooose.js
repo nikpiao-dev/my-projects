@@ -19,3 +19,12 @@ Afterward, run this code and observe what's printed to the terminal.
 
 """
 
+
+let randomNumber = Math.floor(Math.random() * 10);
+
+while (randomNumber !== 7) {
+  console.log("Duck 🦆");
+  randomNumber = Math.floor(Math.random() * 10);
+}
+
+console.log("Goose! 🦢");
