@@ -1,0 +1,12 @@
+To display the DataFrame, simply type its name movies and hit shift + enter.
+
+No need to use the print() function!
+
+A table like this should appear:
+
+pandas table
+
+If you are new to the Python notebook:
+
+shift + enter runs the current cell.
+enter simply creates a new line inside the current cell (without running it).
