@@ -1,0 +1,14 @@
+22. Based Numbers
+# Congrats!
+console.log("Congrats! You've made it. 🎉");
+
+Woohoo! We made it to the end of the chapter!
+
+Here is a recap of what we learned:
+
+You can use loops to perform the same operations over and over.
+A while loop runs as long as a condition is true.
+A for loop runs a certain amount of times, based on an iterator variable.
+The continue keyword ends the current iteration in a loop, given a true condition.
+The break keyword exits the loop entirely, given a true condition.
+
