@@ -1,0 +1,17 @@
+02. Import
+# Import NumPy
+First things first, to access NumPy and its functions, we need to import it at the top of our Python file, like this:
+
+import numpy
+
+Now, we can use the numpy package in the rest of the program. 📦
+
+Another common way to import NumPy is:
+
+import numpy as np
+
+Here, we are importing the numpy package and then using the as keyword to name it np for short. After this point of the program, we can use np instead of the full name numpy.
+
+Yes, it's only three characters shorter, but programmers love efficiency! If you have to type "numpy" over and over again, you would get sick of it, too!
+
+Data Analysts and Data Scientists use np, so we will follow that in this course.
