@@ -1,0 +1,70 @@
+02. Contact List
+# DataFrame
+We just saw an example of a DataFrame. Let's now dive in a bit deeper.
+
+A DataFrame is the heart of the Pandas library. Think of it like a spreadsheet we can control with code: a table made up of rows and columns, where each column holds a specific type of data like numbers, text, or even dates.
+
+They are incredibly versatile. It's super easy to sort, filter, group, edit, and analyze data.
+
+## Importing Pandas
+Before getting started, we have to first import Pandas. pandas is commonly imported and nicknamed as pd:
+
+import pandas
+
+Once Pandas is imported, we can begin creating DataFrames.
+
+Suppose we want a DataFrame for cities. There are a few different ways!
+
+city	country	population
+Brooklyn	US	2646000
+Seoul	South Korea	9411000
+Barcelona	Spain	1636000
+Mexico City	Mexico	9209944
+## Creating from a Dictionary
+This is the most popular way to build a DataFrame from scratch:
+
+import pandas as pd
+
+data = {
+  'city': ['Brooklyn', 'Seoul', 'Barcelona', 'Mexico City'],
+  'country': ['US', 'South Korea', 'Spain', 'Mexico'],
+  'population': [2646000, 9411000, 1636000, 9209944]
+}
+
+df = pd.DataFrame(data)
+
+Each key in the data dictionary (city, country, population) becomes a column, and each index in the lists will become a row. For example, the first row will represent the city Brooklyn, US, with a population of 2.646 million people.
+
+Once the dictionary is created, we can pass the dictionary to pd.DataFrame() to create the DataFrame. Here, we stored it in a variable named df, short for DataFrame.
+
+## Creating from a List of Lists
+Sometimes it’s easier to think in rows. We can do that like this with a 2D list:
+
+data = [
+  ['Brooklyn', 'US', 2646000],
+  ['Seoul', 'South Korea', 9411000],
+  ['Barcelona', 'Spain', 1636000],
+  ['Mexico City', 'Mexico', 9209944]
+]
+
+df = pd.DataFrame(data, columns=['city', 'country', 'population'])
+
+Here, each inner list is a row. Don’t forget to name our columns with the columns parameter!
+
+## Importing from a CSV File
+Let's say we have a .csv (Comma-Separated Values) file sitting on our computer that we want to bring into Python. We can load it into Pandas in one line with .read_csv():
+
+df = pd.read_csv('my_filename.csv')
+
+Replace my_filename.csv with file name. If it’s in the same folder as the the code, we gucci.
+
+We'll use this method most often when working with with data from the real world.
+
+## Bonus: Importing from Other File Types
+Sometimes, data comes in .tsv (Tab-Separated Values) format instead of .csv.
+
+To account for this, we just need to add a delimiter parameter:
+
+df = pd.read_csv('my_filename.tsv', delimiter='\t')
+
+Here, delimiter='\t' tells Python that the values in the my_filename.tsv file are separated by tabs rather than commas.
