@@ -31,6 +31,4 @@ data = {
 
 contacts = pd.DataFrame(data)
 
-print(contants)
-
-
+print(contacts)
